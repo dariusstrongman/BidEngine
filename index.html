@@ -237,11 +237,11 @@
 <!-- Video -->
 <section id="video" style="padding:0 2rem 4rem;">
     <div class="video-section">
-        <div class="video-placeholder" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1\' frameborder=\'0\' allowfullscreen style=\'width:100%;height:100%;position:absolute;top:0;left:0;\'></iframe>';this.style.paddingTop='56.25%';this.style.position='relative';">
-            <div style="background:linear-gradient(135deg,#111827,#1E293B);width:100%;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;flex-direction:column;">
-                <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-                <p style="color:#94A3B8;margin-top:1.5rem;font-size:0.95rem;">See BidEngine analyze a real blueprint in under 5 minutes</p>
-            </div>
+        <video id="demoVideo" width="100%" style="display:block;border-radius:16px;" poster="" preload="metadata" onclick="this.paused?this.play():this.pause();" muted>
+            <source src="bidengine-demo.mp4" type="video/mp4">
+        </video>
+        <div id="playOverlay" onclick="var v=document.getElementById('demoVideo');v.muted=false;v.currentTime=0;v.play();this.style.display='none';" style="position:absolute;top:0;left:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;cursor:pointer;background:rgba(0,0,0,0.3);border-radius:16px;">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
         </div>
     </div>
 </section>
