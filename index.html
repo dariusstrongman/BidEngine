@@ -11,14 +11,16 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://bidengine.stromation.com/">
     <meta property="og:site_name" content="BidEngine">
-    <meta property="og:image" content="https://www.stromation.com/banner-1500x500.png">
+    <meta property="og:image" content="https://bidengine.stromation.com/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@stromationhq">
     <meta name="twitter:title" content="BidEngine - AI Bid Estimating Engine">
     <meta name="twitter:description" content="Upload blueprints. Get professional quotes in 5 minutes.">
-    <meta name="twitter:image" content="https://www.stromation.com/banner-1500x500.png">
+    <meta name="twitter:image" content="https://bidengine.stromation.com/og-image.png">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/x-icon" href="favicon.svg">
+    <link rel="apple-touch-icon" href="og-image.png">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" as="style">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -26,6 +28,15 @@
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B6Z6XV02RT');</script>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"SoftwareApplication","name":"BidEngine","applicationCategory":"BusinessApplication","description":"AI-powered bid estimating tool for construction subcontractors.","url":"https://bidengine.stromation.com/","offers":[{"@type":"Offer","name":"Starter","price":"149","priceCurrency":"USD"},{"@type":"Offer","name":"Pro","price":"299","priceCurrency":"USD"},{"@type":"Offer","name":"Enterprise","price":"999","priceCurrency":"USD"}],"provider":{"@type":"Organization","name":"Stromation","url":"https://www.stromation.com"}}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"What trades does BidEngine support?","acceptedAnswer":{"@type":"Answer","text":"We support low-voltage/telecom, security and access control, fire alarm, electrical, audio visual and paging, and HVAC/plumbing."}},
+      {"@type":"Question","name":"How accurate are the AI estimates?","acceptedAnswer":{"@type":"Answer","text":"The AI reads device schedules first, then verifies with symbol counting. When both sources agree, accuracy is 95%+."}},
+      {"@type":"Question","name":"Can I use my own pricing?","acceptedAnswer":{"@type":"Answer","text":"Yes. You set your vendor prices, labor rates, overhead, profit margins, and tax rate."}},
+      {"@type":"Question","name":"Does it work with PlanHub and ConstructConnect?","acceptedAnswer":{"@type":"Answer","text":"Yes. The system auto-monitors both platforms for new bid invitations every 30 minutes."}},
+      {"@type":"Question","name":"Can I cancel anytime?","acceptedAnswer":{"@type":"Answer","text":"Yes. Monthly billing, cancel anytime. No contracts, no setup fees."}}
+    ]}
     </script>
     <style>
         *{margin:0;padding:0;box-sizing:border-box;}
@@ -232,6 +243,14 @@
         .badge-gpt{background:rgba(245,158,11,0.15);color:var(--accent);}
         .dash-bid .bid-total{color:#fff;font-weight:700;font-family:'Courier New',monospace;text-align:right;}
 
+        /* Mobile nav */
+        @media(max-width:768px){
+            .nav-links{display:none;position:absolute;top:100%;left:0;width:100%;background:var(--navy);border-top:1px solid var(--border);flex-direction:column;padding:1rem 2rem;gap:1rem;}
+            .nav-links.show{display:flex;}
+            .mobile-toggle{display:flex !important;}
+        }
+        @media(min-width:769px){.mobile-toggle{display:none !important;}}
+
         @media(max-width:768px){
             .hero h1{font-size:2.4rem;}
             .nav-links{display:none;}
@@ -286,7 +305,7 @@
 <!-- Video -->
 <section id="video" style="padding:0 2rem 4rem;">
     <div class="video-section">
-        <video id="demoVideo" width="100%" style="display:block;border-radius:16px;" preload="metadata" controls controlsList="nodownload" muted>
+        <video id="demoVideo" width="100%" style="display:block;border-radius:16px;" poster="video-poster.png" preload="metadata" controls controlsList="nodownload" muted>
             <source src="bidengine-demo.mp4" type="video/mp4">
         </video>
         <div id="playOverlay" onclick="var v=document.getElementById('demoVideo');v.muted=false;v.currentTime=0;v.play();this.style.display='none';" style="position:absolute;top:0;left:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;cursor:pointer;background:rgba(0,0,0,0.4);border-radius:16px;">
@@ -611,8 +630,15 @@
                 <h4>Contact</h4>
                 <a href="mailto:contact@stromation.com">contact@stromation.com</a>
                 <a href="tel:+18559320493">(855) 932-0493</a>
-                <a href="https://www.stromation.com/privacy.html">Privacy</a>
-                <a href="https://www.stromation.com/terms.html">Terms</a>
+                <div style="margin-top:1rem;">
+                    <div style="display:flex;align-items:center;gap:6px;color:var(--brand);font-size:0.8rem;">
+                        <span>&#128274;</span> Your data is encrypted and secure
+                    </div>
+                </div>
+                <div style="margin-top:0.75rem;">
+                    <a href="https://www.stromation.com/privacy.html">Privacy</a>
+                    <a href="https://www.stromation.com/terms.html">Terms</a>
+                </div>
             </div>
         </div>
         <div class="footer-bottom">&copy; 2026 Stromation. All rights reserved.</div>
