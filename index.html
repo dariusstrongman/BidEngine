@@ -610,7 +610,7 @@ const observer = new IntersectionObserver((entries) => {
 reveals.forEach(el => observer.observe(el));
 
 // Also add reveal to sections that don't have it yet
-document.querySelectorAll('.feature-card,.trade-card,.testimonial-card,.price-card,.faq-item,.step').forEach(el => {
+document.querySelectorAll('.feature-card,.trade-card,.testimonial-card,.price-card,.step').forEach(el => {
     el.classList.add('reveal');
     observer.observe(el);
 });
