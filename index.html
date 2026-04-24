@@ -784,10 +784,7 @@ if(tallyEl){
     }, 300);
 }
 
-// FAQ accordion
-document.querySelectorAll('.faq-q').forEach(q => {
-    q.addEventListener('click', () => q.parentElement.classList.toggle('open'));
-});
+// FAQ accordion (handled by inline onclick, no duplicate listener needed)
 
 // Waitlist form with honeypot + 3-second time gate
 (function(){
