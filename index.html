@@ -19,14 +19,13 @@
     <meta name="twitter:image" content="https://bidengine.stromation.com/og-image.png">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="apple-touch-icon" href="og-image.png">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" as="style">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B6Z6XV02RT"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B6Z6XV02RT');</script>
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"BidEngine","applicationCategory":"BusinessApplication","description":"AI-powered bid estimating tool for construction subcontractors.","url":"https://bidengine.stromation.com/","offers":[{"@type":"Offer","name":"Starter","price":"149","priceCurrency":"USD"},{"@type":"Offer","name":"Pro","price":"299","priceCurrency":"USD"},{"@type":"Offer","name":"Enterprise","price":"999","priceCurrency":"USD"}],"provider":{"@type":"Organization","name":"Stromation","url":"https://www.stromation.com"}}
+    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"BidEngine","applicationCategory":"BusinessApplication","description":"AI-powered bid estimating tool for construction subcontractors.","url":"https://bidengine.stromation.com/","offers":[{"@type":"Offer","name":"Starter","price":"49","priceCurrency":"USD"},{"@type":"Offer","name":"Pro","price":"199","priceCurrency":"USD"},{"@type":"Offer","name":"Unlimited","price":"499","priceCurrency":"USD"}],"provider":{"@type":"Organization","name":"Stromation","url":"https://www.stromation.com"}}
     </script>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
@@ -45,230 +44,225 @@
     </script>
     <style>
         *{margin:0;padding:0;box-sizing:border-box;}
-        body{font-family:'Inter',sans-serif;background:#0A1220;color:#E2E8F0;overflow-x:hidden;}
+
+        :root{
+            --navy:#0F1F2E;
+            --navy-deep:#0A1520;
+            --navy-card:#1A2B3C;
+            --cream:#F5F5F0;
+            --cream2:#EEEEE8;
+            --orange:#E8650A;
+            --orange-hover:#C4520A;
+            --orange-dim:rgba(232,101,10,.08);
+            --orange-glow:rgba(232,101,10,.2);
+            --steel:#2E3F50;
+            --text-light:#D4D8DC;
+            --text-mid:#8A96A3;
+            --text-dark:#1C1C1E;
+            --text-dark2:#4A5568;
+            --green:#10B981;
+        }
+
+        body{font-family:'IBM Plex Sans',sans-serif;font-weight:400;background:var(--navy);color:var(--text-light);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
         a{color:inherit;text-decoration:none;}
+        h1,h2,h3,h4,h5,h6,.section-label,.btn,.nav-cta,.beta-badge,.stat-num,.step-num,.price-tier,.price-amount,.comp-header{font-family:'Barlow Condensed',sans-serif;}
 
-        /* Brand Colors: Cyan + Amber on dark navy */
-        :root{--brand:#00D4AA;--brand-glow:rgba(0,212,170,0.15);--accent:#F59E0B;--navy:#0A1220;--card:#0F1A2E;--border:#1A2744;--text:#CBD5E1;--text-dim:#64748B;}
+        /* Blueprint grid texture */
+        .bp-grid{position:relative;}
+        .bp-grid::after{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(232,101,10,.03) 0px,rgba(232,101,10,.03) 1px,transparent 1px,transparent 40px),repeating-linear-gradient(90deg,rgba(232,101,10,.03) 0px,rgba(232,101,10,.03) 1px,transparent 1px,transparent 40px);pointer-events:none;z-index:0;}
 
-        /* Blueprint grid background */
-        .blueprint-bg{position:relative;}
-        .blueprint-bg::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(0,212,170,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,170,0.03) 1px,transparent 1px);background-size:40px 40px;pointer-events:none;}
-
-        /* Nav */
-        .nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(10,18,32,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0.8rem 0;}
-        .nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;}
-        .nav-logo{font-size:1.3rem;font-weight:800;color:#fff;display:flex;align-items:center;gap:0.6rem;}
-        .nav-logo .logo-icon{width:32px;height:32px;background:var(--brand);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--navy);font-size:1rem;}
-        .nav-logo span{color:var(--brand);}
-        .nav-links{display:flex;gap:2rem;align-items:center;}
-        .nav-links a{font-size:0.9rem;color:#94A3B8;transition:color 0.2s;}
+        /* ===== NAV ===== */
+        .nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(15,31,46,0.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,0.06);padding:0;}
+        .nav-inner{max-width:1200px;margin:0 auto;padding:0.7rem 2rem;display:flex;align-items:center;justify-content:space-between;}
+        .nav-logo{display:flex;align-items:center;gap:0.5rem;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.35rem;color:#fff;letter-spacing:0.5px;}
+        .nav-logo svg{width:28px;height:28px;flex-shrink:0;}
+        .nav-logo .eng{color:var(--orange);}
+        .beta-badge{display:inline-block;background:var(--orange);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:0.6rem;font-weight:800;padding:2px 7px;border-radius:2px;margin-left:6px;letter-spacing:1.5px;text-transform:uppercase;vertical-align:middle;}
+        .nav-links{display:flex;gap:1.8rem;align-items:center;}
+        .nav-links a{font-size:0.85rem;color:var(--text-mid);transition:color 0.2s;font-weight:500;}
         .nav-links a:hover{color:#fff;}
-        .nav-cta{background:var(--brand);color:#fff !important;padding:0.5rem 1.2rem;border-radius:8px;font-weight:600;font-size:0.85rem;}
-        .nav-cta:hover{background:#00B894;}
-        .beta-badge{display:inline-block;background:#F59E0B;color:#0A1220;font-size:0.65rem;font-weight:800;padding:2px 8px;border-radius:20px;margin-left:8px;letter-spacing:1px;text-transform:uppercase;vertical-align:middle;}
-        .coming-soon-bar{background:linear-gradient(90deg,#F59E0B,#F97316);color:#0A1220;text-align:center;padding:8px 16px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;}
+        .nav-cta{background:var(--orange);color:#fff !important;padding:0.5rem 1.3rem;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.9rem;letter-spacing:0.5px;text-transform:uppercase;transition:background 0.2s;}
+        .nav-cta:hover{background:var(--orange-hover);}
         .mobile-toggle{display:none;cursor:pointer;flex-direction:column;gap:5px;}
         .mobile-toggle span{width:24px;height:2px;background:#fff;}
 
-        /* Hero */
-        .hero{padding:8rem 0 5rem;text-align:center;position:relative;overflow:hidden;}
-        .hero::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,var(--brand-glow) 0%,transparent 70%);pointer-events:none;}
-        .hero h1{font-size:3.8rem;font-weight:900;line-height:1.05;margin-bottom:1.5rem;max-width:800px;margin-left:auto;margin-right:auto;}
-        .hero h1 .gradient{background:linear-gradient(135deg,var(--brand),var(--brand),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-        .hero .sub{font-size:1.2rem;color:#94A3B8;max-width:600px;margin:0 auto 2.5rem;line-height:1.7;}
-        .hero-ctas{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem;}
-        .btn-primary{background:var(--brand);color:#fff;padding:0.9rem 2rem;border-radius:10px;font-weight:700;font-size:1rem;border:none;cursor:pointer;transition:all 0.2s;display:inline-block;}
-        .btn-primary:hover{background:#00B894;transform:translateY(-2px);box-shadow:0 8px 30px rgba(99,102,241,0.3);}
-        .btn-secondary{background:transparent;color:var(--brand);padding:0.9rem 2rem;border-radius:10px;font-weight:700;font-size:1rem;border:2px solid var(--brand);cursor:pointer;transition:all 0.2s;display:inline-block;}
-        .btn-secondary:hover{background:var(--brand);color:#fff;}
-
-        /* Stats Bar */
-        .stats-bar{display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;margin-bottom:3rem;}
-        .stat-item{text-align:center;}
-        .stat-num{font-size:2.2rem;font-weight:900;color:#fff;font-family:'Courier New',monospace;}
-        .stat-num span{color:var(--brand);}
-        .stat-label{font-size:0.85rem;color:#64748B;margin-top:0.2rem;}
-
-        /* Video Section */
-        .video-section{max-width:900px;margin:0 auto 2rem;position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--border);box-shadow:0 20px 60px rgba(0,0,0,0.5);}
-        .video-placeholder{background:var(--card);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative;}
-        .video-placeholder img{width:100%;height:100%;object-fit:cover;opacity:0.6;}
-        .play-btn{position:absolute;width:80px;height:80px;background:rgba(99,102,241,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all 0.3s;}
-        .play-btn:hover{transform:scale(1.1);background:var(--brand);}
-        .play-btn svg{width:32px;height:32px;fill:#fff;margin-left:4px;}
-        .video-caption{text-align:center;color:#64748B;font-size:0.85rem;margin-top:0.75rem;}
-
-        /* Logo Strip */
-        .logo-strip{padding:3rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden;}
-        .logo-strip-title{text-align:center;color:#475569;font-size:0.8rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:1.5rem;}
-        .logo-scroll{display:flex;gap:3rem;animation:scrollLogos 20s linear infinite;width:max-content;}
-        .logo-scroll img{height:32px;opacity:0.4;filter:grayscale(1) brightness(2);transition:opacity 0.3s;}
-        .logo-scroll img:hover{opacity:0.8;}
-        @keyframes scrollLogos{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-
-        /* Sections */
-        .section{padding:5rem 0;}
-        .section.alt{background:#081018;}
-        .container{max-width:1200px;margin:0 auto;padding:0 2rem;}
+        /* ===== SECTIONS ===== */
+        .section{padding:6rem 0;position:relative;}
+        .section-dark{background:var(--navy);color:var(--text-light);}
+        .section-light{background:var(--cream);color:var(--text-dark);}
+        .container{max-width:1200px;margin:0 auto;padding:0 2rem;position:relative;z-index:1;}
         .section-header{text-align:center;margin-bottom:3.5rem;}
-        .section-header h2{font-size:2.5rem;font-weight:800;margin-bottom:0.75rem;}
-        .section-header p{color:#94A3B8;font-size:1.1rem;max-width:600px;margin:0 auto;}
-        .section-label{color:var(--brand);font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:0.5rem;}
+        .section-header h2{font-size:2.6rem;font-weight:800;text-transform:uppercase;letter-spacing:-0.5px;line-height:1.1;margin-bottom:0.75rem;}
+        .section-dark .section-header h2{color:#fff;}
+        .section-light .section-header h2{color:var(--text-dark);}
+        .section-header p{font-size:1.05rem;max-width:580px;margin:0 auto;line-height:1.7;}
+        .section-dark .section-header p{color:var(--text-mid);}
+        .section-light .section-header p{color:var(--text-dark2);}
+        .section-label{color:var(--orange);font-family:'Barlow Condensed',sans-serif;font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:3px;margin-bottom:0.5rem;}
 
-        /* Comparison Table */
-        .comparison{max-width:750px;margin:0 auto;border-radius:16px;overflow:hidden;border:1px solid var(--border);}
-        .comp-row{display:grid;grid-template-columns:1fr 1fr 1fr;padding:1rem 1.5rem;border-bottom:1px solid var(--border);font-size:0.95rem;}
+        /* ===== BUTTONS ===== */
+        .btn-primary{display:inline-block;background:var(--orange);color:#fff;padding:0.85rem 2rem;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;text-transform:uppercase;letter-spacing:0.5px;border:none;cursor:pointer;transition:all 0.2s;}
+        .btn-primary:hover{background:var(--orange-hover);transform:translateY(-2px);box-shadow:0 6px 24px var(--orange-glow);}
+        .btn-secondary{display:inline-block;background:transparent;color:var(--orange);padding:0.85rem 2rem;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;text-transform:uppercase;letter-spacing:0.5px;border:2px solid var(--orange);cursor:pointer;transition:all 0.2s;}
+        .btn-secondary:hover{background:var(--orange);color:#fff;}
+
+        /* ===== HERO ===== */
+        .hero{padding:7.5rem 0 5rem;position:relative;overflow:hidden;}
+        .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+        .hero h1{font-size:3.5rem;font-weight:800;text-transform:uppercase;line-height:1.05;color:#fff;letter-spacing:-1px;margin-bottom:1.5rem;}
+        .hero h1 .highlight{color:var(--orange);}
+        .hero .sub{font-size:1.1rem;color:var(--text-mid);line-height:1.7;margin-bottom:2.5rem;max-width:520px;}
+        .hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3rem;}
+        .stats-bar{display:flex;gap:2.5rem;flex-wrap:wrap;}
+        .stat-item{text-align:center;}
+        .stat-num{font-size:2rem;font-weight:800;color:#fff;font-family:'Barlow Condensed',sans-serif;letter-spacing:-0.5px;}
+        .stat-num span{color:var(--orange);}
+        .stat-label{font-size:0.8rem;color:var(--text-mid);margin-top:0.15rem;font-weight:500;}
+
+        /* Hero blueprint SVG */
+        .hero-blueprint{position:relative;width:100%;aspect-ratio:1/0.85;}
+        .hero-blueprint svg{width:100%;height:100%;}
+        .device-ring{opacity:0;animation:ringIn 0.5s ease-out forwards;}
+        @keyframes ringIn{0%{opacity:0;transform:scale(0.3);}100%{opacity:1;transform:scale(1);}}
+        .tally-box{position:absolute;bottom:12px;right:12px;background:var(--navy-card);border:1px solid var(--orange);border-radius:4px;padding:8px 16px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.1rem;color:var(--orange);letter-spacing:1px;}
+
+        /* ===== VIDEO ===== */
+        .video-wrap{max-width:900px;margin:0 auto;position:relative;border-radius:4px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);box-shadow:0 20px 60px rgba(0,0,0,0.5);}
+        .video-wrap video{display:block;width:100%;border-radius:4px;}
+        .play-overlay{position:absolute;top:0;left:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;cursor:pointer;background:rgba(0,0,0,0.4);border-radius:4px;}
+        .play-btn{width:72px;height:72px;background:var(--orange);border-radius:4px;display:flex;align-items:center;justify-content:center;transition:all 0.3s;}
+        .play-btn:hover{background:var(--orange-hover);transform:scale(1.05);}
+        .play-btn svg{width:28px;height:28px;fill:#fff;margin-left:3px;}
+
+        /* ===== HOW IT WORKS ===== */
+        .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;position:relative;}
+        .steps::before{content:'';position:absolute;top:36px;left:calc(12.5% + 1rem);right:calc(12.5% + 1rem);height:2px;background:var(--orange-dim);z-index:0;}
+        .step{text-align:center;position:relative;z-index:1;}
+        .step-num{width:72px;height:72px;background:var(--navy-card);border:2px solid var(--orange);border-radius:4px;color:var(--orange);font-size:1.6rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem;font-family:'Barlow Condensed',sans-serif;}
+        .step-icon{margin:0 auto 1rem;}
+        .step-icon svg{width:36px;height:36px;}
+        .step h3{font-size:1.15rem;font-weight:700;text-transform:uppercase;letter-spacing:0.3px;margin-bottom:0.5rem;color:var(--text-dark);}
+        .step p{color:var(--text-dark2);font-size:0.9rem;line-height:1.65;}
+
+        /* ===== TRADES ===== */
+        .trades-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
+        .trade-card{background:var(--navy-card);border:1px solid rgba(255,255,255,0.06);border-left:3px solid transparent;border-radius:4px;padding:1.5rem;display:flex;align-items:flex-start;gap:1rem;transition:all 0.3s;}
+        .trade-card:hover{border-left-color:var(--orange);background:rgba(232,101,10,0.04);}
+        .trade-card svg{width:32px;height:32px;flex-shrink:0;color:var(--orange);}
+        .trade-card h3{font-size:1rem;font-weight:700;color:#fff;margin-bottom:0.3rem;text-transform:uppercase;letter-spacing:0.3px;}
+        .trade-card p{color:var(--text-mid);font-size:0.85rem;line-height:1.55;}
+
+        /* ===== COMPARISON ===== */
+        .comparison{max-width:750px;margin:0 auto;border-radius:4px;overflow:hidden;border:1px solid #ddd;}
+        .comp-row{display:grid;grid-template-columns:1fr 1fr 1fr;padding:1rem 1.5rem;border-bottom:1px solid #e8e8e2;font-size:0.95rem;}
         .comp-row:last-child{border-bottom:none;}
-        .comp-header{background:var(--border);font-weight:700;color:#94A3B8;font-size:0.8rem;text-transform:uppercase;letter-spacing:1px;}
-        .comp-row .label{color:#CBD5E1;}
-        .comp-row .old{color:#EF4444;}
-        .comp-row .new{color:#34D399;font-weight:700;}
-        .comp-row:nth-child(even){background:rgba(99,102,241,0.03);}
+        .comp-header{background:var(--navy);font-family:'Barlow Condensed',sans-serif;font-weight:700;color:var(--text-mid);font-size:0.8rem;text-transform:uppercase;letter-spacing:1.5px;}
+        .comp-row .label{color:var(--text-dark);}
+        .comp-row .old{color:#DC2626;font-weight:500;}
+        .comp-row .new{color:var(--green);font-weight:700;}
+        .comp-row:nth-child(even){background:var(--cream2);}
 
-        /* Feature Grid */
-        .feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;}
-        .feature-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;transition:all 0.3s;}
-        .feature-card:hover{border-color:var(--brand);transform:translateY(-4px);box-shadow:0 12px 40px rgba(99,102,241,0.1);}
-        .feature-icon{width:52px;height:52px;background:rgba(99,102,241,0.1);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem;font-size:1.5rem;}
-        .feature-card h3{font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:0.5rem;}
-        .feature-card p{color:#94A3B8;font-size:0.92rem;line-height:1.65;}
+        /* ===== FEATURES ===== */
+        .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
+        .feature-card{background:var(--navy-card);border:1px solid rgba(255,255,255,0.06);border-radius:4px;padding:2rem;transition:all 0.3s;}
+        .feature-card:hover{border-color:var(--orange);transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,0.3);}
+        .feature-icon{width:48px;height:48px;background:var(--orange-dim);border-radius:4px;display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem;}
+        .feature-icon svg{width:24px;height:24px;color:var(--orange);}
+        .feature-card h3{font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.3px;}
+        .feature-card p{color:var(--text-mid);font-size:0.9rem;line-height:1.65;}
 
-        /* How It Works */
-        .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:2rem;position:relative;}
-        .step{text-align:center;position:relative;}
-        .step-num{width:64px;height:64px;background:linear-gradient(135deg,#00D4AA,#00B894);border-radius:50%;color:var(--navy);font-size:1.5rem;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem;box-shadow:0 8px 25px rgba(99,102,241,0.3);}
-        .step h3{font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;}
-        .step p{color:#CBD5E1;font-size:0.92rem;line-height:1.6;}
-
-        /* Trades Grid */
-        .trades-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;}
-        .trade-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;display:flex;align-items:flex-start;gap:1rem;transition:border-color 0.3s;}
-        .trade-card:hover{border-color:var(--brand);}
-        .trade-icon{font-size:1.8rem;flex-shrink:0;}
-        .trade-card h3{font-size:1rem;font-weight:700;color:#fff;margin-bottom:0.3rem;}
-        .trade-card p{color:#94A3B8;font-size:0.85rem;line-height:1.5;}
-
-        /* Pricing */
-        .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;max-width:960px;margin:0 auto;}
-        .price-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2.5rem 2rem;text-align:center;position:relative;transition:all 0.3s;}
-        .price-card:hover{border-color:var(--brand);transform:translateY(-4px);}
-        .price-card.popular{border-color:var(--brand);box-shadow:0 0 40px rgba(99,102,241,0.15);}
-        .price-card.popular::before{content:'MOST POPULAR';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--brand);color:#fff;padding:0.3rem 1.2rem;border-radius:20px;font-size:0.7rem;font-weight:700;letter-spacing:1px;}
-        .price-tier{color:var(--brand);font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:0.5rem;}
-        .price-amount{font-size:3.2rem;font-weight:900;color:#fff;}
-        .price-amount span{font-size:1rem;font-weight:500;color:#64748B;}
-        .price-desc{color:#94A3B8;margin:0.75rem 0 1.5rem;font-size:0.95rem;}
-        .price-card ul{list-style:none;text-align:left;margin-bottom:2rem;}
-        .price-card li{padding:0.6rem 0;color:#CBD5E1;font-size:0.9rem;border-bottom:1px solid var(--border);}
-        .price-card li::before{content:'\2713';color:#34D399;margin-right:0.75rem;font-weight:700;}
-
-        /* Testimonials */
-        .testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;}
-        .testimonial-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;}
-        .testimonial-card .stars{color:#F59E0B;font-size:1.1rem;margin-bottom:1rem;}
-        .testimonial-card blockquote{color:#CBD5E1;font-size:0.95rem;line-height:1.7;font-style:italic;margin-bottom:1.2rem;}
-        .testimonial-author{display:flex;align-items:center;gap:0.75rem;}
-        .testimonial-avatar{width:40px;height:40px;background:var(--brand);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:0.9rem;}
-        .testimonial-name{font-weight:700;color:#fff;font-size:0.9rem;}
-        .testimonial-role{color:#64748B;font-size:0.8rem;}
-
-        /* Case Study */
-        .case-study{max-width:800px;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:3rem;position:relative;}
-        .case-study .cs-label{color:var(--brand);font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:0.5rem;}
-        .case-study h3{font-size:1.5rem;font-weight:800;color:#fff;margin-bottom:1rem;}
-        .case-study p{color:#94A3B8;line-height:1.7;margin-bottom:1.5rem;}
-        .cs-stats{display:flex;gap:2rem;flex-wrap:wrap;}
+        /* ===== CASE STUDY ===== */
+        .case-study{max-width:800px;margin:0 auto;background:#fff;border:1px solid #ddd;border-left:4px solid var(--orange);border-radius:4px;padding:3rem;}
+        .case-study .cs-label{color:var(--orange);font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:0.5rem;}
+        .case-study h3{font-size:1.5rem;font-weight:800;color:var(--text-dark);margin-bottom:1rem;text-transform:uppercase;letter-spacing:-0.3px;}
+        .case-study p{color:var(--text-dark2);line-height:1.7;margin-bottom:1.5rem;font-size:0.95rem;}
+        .cs-stats{display:flex;gap:2.5rem;flex-wrap:wrap;}
         .cs-stat{text-align:center;}
-        .cs-stat .num{font-size:1.8rem;font-weight:900;color:#34D399;}
-        .cs-stat .label{font-size:0.8rem;color:#64748B;}
+        .cs-stat .num{font-size:1.8rem;font-weight:800;color:var(--orange);font-family:'Barlow Condensed',sans-serif;}
+        .cs-stat .label{font-size:0.8rem;color:var(--text-dark2);}
 
-        /* FAQ */
+        /* ===== PRICING ===== */
+        .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:960px;margin:0 auto;}
+        .price-card{background:#fff;border:1px solid #ddd;border-radius:4px;padding:2.5rem 2rem;text-align:center;position:relative;transition:all 0.3s;}
+        .price-card:hover{border-color:var(--orange);transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,0.08);}
+        .price-card.popular{border-color:var(--orange);box-shadow:0 0 0 2px var(--orange);}
+        .price-card.popular::before{content:'POPULAR';position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--orange);color:#fff;padding:0.3rem 1.2rem;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:1.5px;}
+        .price-tier{color:var(--orange);font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:0.5rem;}
+        .price-amount{font-size:3.2rem;font-weight:800;color:var(--text-dark);font-family:'Barlow Condensed',sans-serif;}
+        .price-amount span{font-size:1rem;font-weight:500;color:var(--text-dark2);}
+        .price-desc{color:var(--text-dark2);margin:0.5rem 0 1.5rem;font-size:0.9rem;}
+        .price-card ul{list-style:none;text-align:left;margin-bottom:2rem;}
+        .price-card li{padding:0.55rem 0;color:var(--text-dark2);font-size:0.88rem;border-bottom:1px solid #eee;}
+        .price-card li::before{content:'';display:inline-block;width:6px;height:6px;background:var(--orange);border-radius:1px;margin-right:0.75rem;vertical-align:middle;}
+
+        /* ===== FAQ ===== */
         .faq-list{max-width:700px;margin:0 auto;}
-        .faq-item{border:1px solid var(--border);border-radius:12px;margin-bottom:0.75rem;overflow:hidden;}
-        .faq-q{padding:1.2rem 1.5rem;cursor:pointer;font-weight:600;color:#fff;display:flex;justify-content:space-between;align-items:center;background:var(--card);transition:background 0.2s;}
-        .faq-q:hover{background:var(--border);}
-        .faq-q .chevron{transition:transform 0.3s;color:#64748B;}
+        .faq-item{border:1px solid #ddd;border-radius:4px;margin-bottom:0.6rem;overflow:hidden;}
+        .faq-q{padding:1.1rem 1.5rem;cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;color:var(--text-dark);display:flex;justify-content:space-between;align-items:center;background:#fff;transition:background 0.2s;text-transform:uppercase;letter-spacing:0.3px;}
+        .faq-q:hover{background:var(--cream2);}
+        .faq-q .chevron{transition:transform 0.3s;color:var(--text-mid);font-size:0.7rem;}
         .faq-item.open .chevron{transform:rotate(180deg);}
-        .faq-a{padding:0 1.5rem;max-height:0;overflow:hidden;transition:all 0.3s;background:#0F1629;}
+        .faq-a{padding:0 1.5rem;max-height:0;overflow:hidden;transition:all 0.3s;background:var(--cream2);}
         .faq-item.open .faq-a{max-height:300px;padding:1rem 1.5rem 1.5rem;}
-        .faq-a p{color:#94A3B8;line-height:1.7;font-size:0.92rem;}
+        .faq-a p{color:var(--text-dark2);line-height:1.7;font-size:0.9rem;}
 
-        /* Final CTA */
-        .final-cta{text-align:center;padding:6rem 0;background:linear-gradient(135deg,#0A2520 0%,#0A1220 100%);position:relative;overflow:hidden;}
-        .final-cta::before{content:'';position:absolute;bottom:-100px;left:50%;transform:translateX(-50%);width:600px;height:400px;background:radial-gradient(circle,rgba(99,102,241,0.1) 0%,transparent 70%);pointer-events:none;}
-        .final-cta h2{font-size:2.8rem;font-weight:900;margin-bottom:1rem;}
-        .final-cta p{color:#94A3B8;font-size:1.15rem;margin-bottom:2.5rem;max-width:500px;margin-left:auto;margin-right:auto;}
+        /* ===== FINAL CTA ===== */
+        .final-cta{padding:6rem 0;text-align:center;position:relative;overflow:hidden;}
+        .final-cta h2{font-size:2.8rem;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:-0.5px;margin-bottom:1rem;}
+        .final-cta h2 .highlight{color:var(--orange);}
+        .final-cta p{color:var(--text-mid);font-size:1.1rem;margin-bottom:2.5rem;max-width:500px;margin-left:auto;margin-right:auto;}
 
-        /* Footer */
-        .footer{background:#080B14;padding:3rem 0 2rem;border-top:1px solid var(--border);}
+        /* Email form */
+        .email-form{display:flex;gap:0.5rem;max-width:480px;margin:0 auto;}
+        .email-form input[type="email"]{flex:1;padding:0.85rem 1.2rem;border-radius:4px;border:1px solid var(--steel);background:var(--navy-card);color:#fff;font-size:0.92rem;font-family:'IBM Plex Sans',sans-serif;outline:none;}
+        .email-form input[type="email"]:focus{border-color:var(--orange);}
+        .email-form button{padding:0.85rem 1.5rem;border-radius:4px;background:var(--orange);color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.95rem;text-transform:uppercase;letter-spacing:0.5px;border:none;cursor:pointer;white-space:nowrap;transition:all 0.2s;}
+        .email-form button:hover{background:var(--orange-hover);}
+        .hp-field{position:absolute;left:-9999px;opacity:0;height:0;width:0;}
+
+        /* ===== FOOTER ===== */
+        .footer{background:var(--navy-deep);padding:3rem 0 2rem;border-top:1px solid rgba(255,255,255,0.06);}
         .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2rem;margin-bottom:2rem;}
-        .footer-brand p{color:#64748B;font-size:0.85rem;line-height:1.6;margin-top:0.5rem;}
-        .footer h4{font-size:0.8rem;color:#64748B;text-transform:uppercase;letter-spacing:1px;margin-bottom:1rem;}
-        .footer a{display:block;color:#94A3B8;font-size:0.85rem;padding:0.2rem 0;transition:color 0.2s;}
+        .footer-brand p{color:var(--text-mid);font-size:0.85rem;line-height:1.6;margin-top:0.5rem;}
+        .footer h4{font-family:'Barlow Condensed',sans-serif;font-size:0.8rem;color:var(--text-mid);text-transform:uppercase;letter-spacing:2px;margin-bottom:1rem;font-weight:700;}
+        .footer a{display:block;color:var(--text-mid);font-size:0.85rem;padding:0.2rem 0;transition:color 0.2s;}
         .footer a:hover{color:#fff;}
-        .footer-bottom{text-align:center;color:#334155;font-size:0.8rem;padding-top:2rem;border-top:1px solid var(--border);}
+        .footer-bottom{text-align:center;color:var(--steel);font-size:0.8rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.06);}
 
-        /* Scroll animations */
+        /* ===== SCROLL ANIMATIONS ===== */
         .reveal{opacity:0;transform:translateY(30px);transition:all 0.6s ease-out;}
         .reveal.visible{opacity:1;transform:translateY(0);}
 
-        /* Sticky CTA */
-        .sticky-cta{position:fixed;bottom:20px;right:20px;z-index:99;background:var(--brand);color:var(--navy);padding:12px 24px;border-radius:50px;font-weight:800;font-size:0.9rem;box-shadow:0 4px 20px rgba(0,212,170,0.4);transition:all 0.3s;opacity:0;pointer-events:none;text-decoration:none;}
+        /* ===== STICKY CTA ===== */
+        .sticky-cta{position:fixed;bottom:20px;right:20px;z-index:99;background:var(--orange);color:#fff;padding:12px 24px;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.9rem;text-transform:uppercase;letter-spacing:0.5px;box-shadow:0 4px 20px var(--orange-glow);transition:all 0.3s;opacity:0;pointer-events:none;text-decoration:none;}
         .sticky-cta.show{opacity:1;pointer-events:auto;}
-        .sticky-cta:hover{transform:scale(1.05);box-shadow:0 6px 30px rgba(0,212,170,0.5);}
+        .sticky-cta:hover{transform:scale(1.05);background:var(--orange-hover);}
 
-        /* Email capture */
-        .email-form{display:flex;gap:0.5rem;max-width:480px;margin:0 auto;}
-        .email-form input{flex:1;padding:0.9rem 1.2rem;border-radius:10px;border:1px solid var(--border);background:var(--card);color:#fff;font-size:0.95rem;outline:none;}
-        .email-form input:focus{border-color:var(--brand);}
-        .email-form button{padding:0.9rem 1.5rem;border-radius:10px;background:var(--brand);color:var(--navy);font-weight:700;border:none;cursor:pointer;white-space:nowrap;transition:all 0.2s;}
-        .email-form button:hover{background:#00B894;}
-
-        /* Integration logos */
-        .integration-grid{display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;align-items:center;}
-        .integration-item{text-align:center;opacity:0.6;transition:opacity 0.3s;}
-        .integration-item:hover{opacity:1;}
-        .integration-item .int-icon{font-size:2.5rem;margin-bottom:0.3rem;}
-        .integration-item .int-name{font-size:0.75rem;color:var(--text-dim);}
-
-        /* Dashboard mockup */
-        .dashboard-mock{max-width:900px;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.4);}
-        .dash-topbar{display:flex;align-items:center;gap:8px;padding:10px 16px;background:#060D18;border-bottom:1px solid var(--border);}
-        .dash-dot{width:10px;height:10px;border-radius:50%;}
-        .dash-content{padding:20px;}
-        .dash-stats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:16px;}
-        .dash-stat{background:#060D18;border-radius:10px;padding:12px;text-align:center;}
-        .dash-stat .ds-label{font-size:10px;color:var(--text-dim);}
-        .dash-stat .ds-val{font-size:20px;font-weight:800;color:#fff;font-family:'Courier New',monospace;}
-        .dash-bids{display:flex;flex-direction:column;gap:8px;}
-        .dash-bid{display:grid;grid-template-columns:1fr 120px 100px 90px;padding:10px 14px;background:#060D18;border-radius:8px;font-size:12px;align-items:center;}
-        .dash-bid .bid-name{color:#fff;font-weight:600;}
-        .dash-bid .bid-gc{color:var(--text-dim);}
-        .dash-bid .bid-badge{padding:3px 8px;border-radius:12px;font-size:10px;font-weight:700;}
-        .badge-claude{background:rgba(0,212,170,0.15);color:var(--brand);}
-        .badge-gpt{background:rgba(245,158,11,0.15);color:var(--accent);}
-        .dash-bid .bid-total{color:#fff;font-weight:700;font-family:'Courier New',monospace;text-align:right;}
-
-        /* Mobile nav */
+        /* ===== MOBILE ===== */
         @media(max-width:768px){
-            .nav-links{display:none;position:absolute;top:100%;left:0;width:100%;background:var(--navy);border-top:1px solid var(--border);flex-direction:column;padding:1rem 2rem;gap:1rem;}
+            .nav-links{display:none;position:absolute;top:100%;left:0;width:100%;background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);flex-direction:column;padding:1rem 2rem;gap:1rem;}
             .nav-links.show{display:flex;}
             .mobile-toggle{display:flex !important;}
+            .hero{padding:6rem 0 3rem;}
+            .hero-grid{grid-template-columns:1fr;gap:2rem;text-align:center;}
+            .hero h1{font-size:2.4rem;}
+            .hero .sub{margin-left:auto;margin-right:auto;}
+            .hero-ctas{justify-content:center;}
+            .stats-bar{justify-content:center;}
+            .hero-blueprint{max-width:400px;margin:0 auto;}
+            .steps{grid-template-columns:1fr 1fr;gap:1.5rem;}
+            .steps::before{display:none;}
+            .trades-grid{grid-template-columns:1fr;}
+            .feature-grid{grid-template-columns:1fr;}
+            .pricing-grid{grid-template-columns:1fr;}
+            .comp-row{font-size:0.82rem;padding:0.8rem 1rem;}
+            .footer-grid{grid-template-columns:1fr;}
+            .cs-stats{justify-content:center;}
+            .section-header h2{font-size:2rem;}
+            .final-cta h2{font-size:2rem;}
+            .email-form{flex-direction:column;}
         }
         @media(min-width:769px){.mobile-toggle{display:none !important;}}
-
-        @media(max-width:768px){
-            .hero h1{font-size:2.4rem;}
-            .nav-links{display:none;}
-            .mobile-toggle{display:flex;}
-            .stats-bar{gap:1.5rem;}
-            .stat-num{font-size:1.6rem;}
-            .comp-row{font-size:0.8rem;padding:0.8rem 1rem;}
-            .footer-grid{grid-template-columns:1fr;}
-            .pricing-grid{grid-template-columns:1fr;}
-            .cs-stats{justify-content:center;}
-        }
     </style>
 </head>
 <body>
@@ -276,14 +270,24 @@
 <!-- Nav -->
 <nav class="nav">
     <div class="nav-inner">
-        <a href="/" class="nav-logo"><div class="logo-icon">B</div>Bid<span>Engine</span><span class="beta-badge">Beta</span></a>
+        <a href="/" class="nav-logo">
+            <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="1" width="26" height="26" rx="3" stroke="#E8650A" stroke-width="2" fill="none"/>
+                <line x1="7" y1="8" x2="21" y2="8" stroke="#E8650A" stroke-width="1.5"/>
+                <line x1="7" y1="14" x2="21" y2="14" stroke="#E8650A" stroke-width="1.5"/>
+                <line x1="7" y1="20" x2="16" y2="20" stroke="#E8650A" stroke-width="1.5"/>
+                <line x1="5" y1="5" x2="5" y2="23" stroke="#E8650A" stroke-width="1" opacity="0.4"/>
+                <line x1="23" y1="5" x2="23" y2="23" stroke="#E8650A" stroke-width="1" opacity="0.4"/>
+            </svg>
+            BID<span class="eng">ENGINE</span><span class="beta-badge">BETA</span>
+        </a>
         <div class="nav-links">
-            <a href="#features">Features</a>
             <a href="#how-it-works">How It Works</a>
             <a href="#trades">Trades</a>
+            <a href="#features">Features</a>
             <a href="#pricing">Pricing</a>
             <a href="#faq">FAQ</a>
-            <a href="https://cal.com/darius-stroman-byeng8/30min" class="nav-cta" target="_blank">Book a Demo</a>
+            <a href="https://cal.com/darius-stroman-byeng8/30min" class="nav-cta" target="_blank">BOOK A DEMO</a>
         </div>
         <div class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">
             <span></span><span></span><span></span>
@@ -291,65 +295,215 @@
     </div>
 </nav>
 
-<div class="coming-soon-bar">Coming Soon -- Join the early access waitlist below</div>
-
 <!-- Hero -->
-<section class="hero blueprint-bg">
+<section class="hero section-dark bp-grid">
     <div class="container">
-        <h1>Bid Faster.<br>Win <span class="gradient">More.</span></h1>
-        <p class="sub">AI-powered estimating that reads your blueprints, counts every device, and generates professional quotes with real vendor part numbers. In 5 minutes, not 8 hours.</p>
-        <div class="hero-ctas">
-            <a href="https://cal.com/darius-stroman-byeng8/30min" class="btn-primary" target="_blank">Book a Free Demo</a>
-            <a href="#video" class="btn-secondary">See How It Works</a>
-        </div>
-        <div class="stats-bar">
-            <div class="stat-item"><div class="stat-num"><span data-target="5" data-suffix=" min">0</span></div><div class="stat-label">Average bid time</div></div>
-            <div class="stat-item"><div class="stat-num"><span data-target="98" data-suffix="%">0</span></div><div class="stat-label">Cost reduction vs manual</div></div>
-            <div class="stat-item"><div class="stat-num"><span data-target="6">0</span></div><div class="stat-label">Trades supported</div></div>
-            <div class="stat-item"><div class="stat-num">24/7</div><div class="stat-label">Bid monitoring</div></div>
+        <div class="hero-grid">
+            <div>
+                <h1>WIN MORE BIDS.<br><span class="highlight">ESTIMATE IN MINUTES.</span></h1>
+                <p class="sub">Upload your blueprints. BidEngine counts every device and builds your quote automatically.</p>
+                <div class="hero-ctas">
+                    <a href="https://cal.com/darius-stroman-byeng8/30min" class="btn-primary" target="_blank">Book a Free Demo</a>
+                    <a href="#how-it-works" class="btn-secondary">See How It Works</a>
+                </div>
+                <div class="stats-bar">
+                    <div class="stat-item"><div class="stat-num"><span data-target="5" data-suffix=" min">0</span></div><div class="stat-label">Average bid time</div></div>
+                    <div class="stat-item"><div class="stat-num"><span data-target="98" data-suffix="%">0</span></div><div class="stat-label">Cost reduction</div></div>
+                    <div class="stat-item"><div class="stat-num"><span data-target="6">0</span></div><div class="stat-label">Trades supported</div></div>
+                    <div class="stat-item"><div class="stat-num">24/7</div><div class="stat-label">Bid monitoring</div></div>
+                </div>
+            </div>
+            <div class="hero-blueprint" aria-hidden="true">
+                <svg viewBox="0 0 480 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Floor plan -->
+                    <rect x="30" y="30" width="420" height="340" rx="2" stroke="#2E3F50" stroke-width="1.5" fill="none"/>
+                    <!-- Rooms -->
+                    <rect x="30" y="30" width="200" height="170" stroke="#2E3F50" stroke-width="1" fill="none"/>
+                    <rect x="230" y="30" width="220" height="170" stroke="#2E3F50" stroke-width="1" fill="none"/>
+                    <rect x="30" y="200" width="140" height="170" stroke="#2E3F50" stroke-width="1" fill="none"/>
+                    <rect x="170" y="200" width="140" height="170" stroke="#2E3F50" stroke-width="1" fill="none"/>
+                    <rect x="310" y="200" width="140" height="170" stroke="#2E3F50" stroke-width="1" fill="none"/>
+                    <!-- Door openings -->
+                    <line x1="120" y1="200" x2="150" y2="200" stroke="var(--navy)" stroke-width="3"/>
+                    <line x1="230" y1="100" x2="230" y2="130" stroke="var(--navy)" stroke-width="3"/>
+                    <line x1="310" y1="280" x2="310" y2="310" stroke="var(--navy)" stroke-width="3"/>
+                    <!-- Room labels -->
+                    <text x="130" y="120" fill="#2E3F50" font-size="11" font-family="IBM Plex Sans" text-anchor="middle" opacity="0.5">OFFICE A</text>
+                    <text x="340" y="120" fill="#2E3F50" font-size="11" font-family="IBM Plex Sans" text-anchor="middle" opacity="0.5">OFFICE B</text>
+                    <text x="100" y="290" fill="#2E3F50" font-size="11" font-family="IBM Plex Sans" text-anchor="middle" opacity="0.5">CONF</text>
+                    <text x="240" y="290" fill="#2E3F50" font-size="11" font-family="IBM Plex Sans" text-anchor="middle" opacity="0.5">LOBBY</text>
+                    <text x="380" y="290" fill="#2E3F50" font-size="11" font-family="IBM Plex Sans" text-anchor="middle" opacity="0.5">SERVER</text>
+                    <!-- Device symbols with orange highlight rings -->
+                    <g class="device-ring" style="animation-delay:0.3s;transform-origin:80px 70px">
+                        <circle cx="80" cy="70" r="12" stroke="#E8650A" stroke-width="2" fill="rgba(232,101,10,0.1)"/>
+                        <text x="80" y="74" fill="#E8650A" font-size="9" text-anchor="middle" font-weight="700">D</text>
+                    </g>
+                    <g class="device-ring" style="animation-delay:0.6s;transform-origin:160px 80px">
+                        <circle cx="160" cy="80" r="12" stroke="#E8650A" stroke-width="2" fill="rgba(232,101,10,0.1)"/>
+                        <text x="160" y="84" fill="#E8650A" font-size="9" text-anchor="middle" font-weight="700">D</text>
+                    </g>
+                    <g class="device-ring" style="animation-delay:0.9s;transform-origin:290px 70px">
+                        <circle cx="290" cy="70" r="12" stroke="#E8650A" stroke-width="2" fill="rgba(232,101,10,0.1)"/>
+                        <text x="290" y="74" fill="#E8650A" font-size="9" text-anchor="middle" font-weight="700">D</text>
+                    </g>
+                    <g class="device-ring" style="animation-delay:1.2s;transform-origin:380px 80px">
+                        <circle cx="380" cy="80" r="12" stroke="#E8650A" stroke-width="2" fill="rgba(232,101,10,0.1)"/>
+                        <text x="380" y="84" fill="#E8650A" font-size="9" text-anchor="middle" font-weight="700">D</text>
+                    </g>
+                    <g class="device-ring" style="animation-delay:1.5s;transform-origin:400px 150px">
+                        <circle cx="400" cy="150" r="12" stroke="#E8650A" stroke-width="2" fill="rgba(232,101,10,0.1)"/>
+                        <text x="400" y="154" fill="#E8650A" font-size="9" text-anchor="middle" font-weight="700">C</text>
+                    </g>
+                    <g class="device-ring" style="animation-delay:1.8s;transform-origin:70px 250px">
+                        <circle cx="70" cy="250" r="12" stroke="#E8650A" stroke-width="2" fill="rgba(232,101,10,0.1)"/>
+                        <text x="70" y="254" fill="#E8650A" font-size="9" text-anchor="middle" font-weight="700">S</text>
+                    </g>
+                    <g class="device-ring" style="animation-delay:2.1s;transform-origin:130px 330px">
+                        <circle cx="130" cy="330" r="12" stroke="#E8650A" stroke-width="2" fill="rgba(232,101,10,0.1)"/>
+                        <text x="130" y="334" fill="#E8650A" font-size="9" text-anchor="middle" font-weight="700">D</text>
+                    </g>
+                    <g class="device-ring" style="animation-delay:2.4s;transform-origin:200px 250px">
+                        <circle cx="200" cy="250" r="12" stroke="#E8650A" stroke-width="2" fill="rgba(232,101,10,0.1)"/>
+                        <text x="200" y="254" fill="#E8650A" font-size="9" text-anchor="middle" font-weight="700">C</text>
+                    </g>
+                    <g class="device-ring" style="animation-delay:2.7s;transform-origin:270px 330px">
+                        <circle cx="270" cy="330" r="12" stroke="#E8650A" stroke-width="2" fill="rgba(232,101,10,0.1)"/>
+                        <text x="270" y="334" fill="#E8650A" font-size="9" text-anchor="middle" font-weight="700">D</text>
+                    </g>
+                    <g class="device-ring" style="animation-delay:3.0s;transform-origin:240px 240px">
+                        <circle cx="240" cy="240" r="12" stroke="#E8650A" stroke-width="2" fill="rgba(232,101,10,0.1)"/>
+                        <text x="240" y="244" fill="#E8650A" font-size="9" text-anchor="middle" font-weight="700">S</text>
+                    </g>
+                    <g class="device-ring" style="animation-delay:3.3s;transform-origin:350px 250px">
+                        <circle cx="350" cy="250" r="12" stroke="#E8650A" stroke-width="2" fill="rgba(232,101,10,0.1)"/>
+                        <text x="350" y="254" fill="#E8650A" font-size="9" text-anchor="middle" font-weight="700">R</text>
+                    </g>
+                    <g class="device-ring" style="animation-delay:3.6s;transform-origin:410px 250px">
+                        <circle cx="410" cy="250" r="12" stroke="#E8650A" stroke-width="2" fill="rgba(232,101,10,0.1)"/>
+                        <text x="410" y="254" fill="#E8650A" font-size="9" text-anchor="middle" font-weight="700">P</text>
+                    </g>
+                    <g class="device-ring" style="animation-delay:3.9s;transform-origin:380px 330px">
+                        <circle cx="380" cy="330" r="12" stroke="#E8650A" stroke-width="2" fill="rgba(232,101,10,0.1)"/>
+                        <text x="380" y="334" fill="#E8650A" font-size="9" text-anchor="middle" font-weight="700">R</text>
+                    </g>
+                    <g class="device-ring" style="animation-delay:4.2s;transform-origin:100px 160px">
+                        <circle cx="100" cy="160" r="12" stroke="#E8650A" stroke-width="2" fill="rgba(232,101,10,0.1)"/>
+                        <text x="100" y="164" fill="#E8650A" font-size="9" text-anchor="middle" font-weight="700">C</text>
+                    </g>
+                </svg>
+                <div class="tally-box">DEVICES FOUND: <span id="tallyCount">0</span></div>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- Video -->
-<section id="video" style="padding:0 2rem 4rem;">
-    <div class="video-section">
-        <video id="demoVideo" width="100%" style="display:block;border-radius:16px;" poster="video-poster.png" preload="metadata" controls controlsList="nodownload" muted>
-            <source src="bidengine-demo.mp4" type="video/mp4">
-        </video>
-        <div id="playOverlay" onclick="var v=document.getElementById('demoVideo');v.muted=false;v.currentTime=0;v.play();this.style.display='none';" style="position:absolute;top:0;left:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;cursor:pointer;background:rgba(0,0,0,0.4);border-radius:16px;">
-            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+<section class="section-dark bp-grid" style="padding:0 0 5rem;">
+    <div class="container">
+        <div class="video-wrap">
+            <video id="demoVideo" width="100%" poster="video-poster.png" preload="metadata" controls controlsList="nodownload" muted>
+                <source src="bidengine-demo.mp4" type="video/mp4">
+            </video>
+            <div id="playOverlay" class="play-overlay" onclick="var v=document.getElementById('demoVideo');v.muted=false;v.currentTime=0;v.play();this.style.display='none';">
+                <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+            </div>
         </div>
     </div>
 </section>
 
-
-<!-- Integrations -->
-<div class="section" style="padding:3rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
-    <div class="container reveal">
-        <div style="text-align:center;color:var(--text-dim);font-size:0.8rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:2rem;">Integrates with your existing tools</div>
-        <div class="integration-grid">
-            <div class="integration-item"><div style="font-size:1.1rem;font-weight:800;color:#fff;padding:8px 16px;background:var(--border);border-radius:8px;">PlanHub</div></div>
-            <div class="integration-item"><div style="font-size:1.1rem;font-weight:800;color:#fff;padding:8px 16px;background:var(--border);border-radius:8px;">ConstructConnect</div></div>
-            <div class="integration-item"><div style="font-size:1.1rem;font-weight:800;color:#fff;padding:8px 16px;background:var(--border);border-radius:8px;">Stripe</div></div>
-            <div class="integration-item"><div style="font-size:1.1rem;font-weight:800;color:#fff;padding:8px 16px;background:var(--border);border-radius:8px;">Gmail</div></div>
-            <div class="integration-item"><div style="font-size:1.1rem;font-weight:800;color:#fff;padding:8px 16px;background:var(--border);border-radius:8px;">PDF Export</div></div>
+<!-- How It Works -->
+<section class="section section-light" id="how-it-works">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-label">How It Works</div>
+            <h2>FROM BLUEPRINT TO BID IN 4 STEPS</h2>
+        </div>
+        <div class="steps">
+            <div class="step reveal">
+                <div class="step-num">1</div>
+                <div class="step-icon">
+                    <svg viewBox="0 0 36 36" fill="none" stroke="#E8650A" stroke-width="2"><rect x="6" y="4" width="24" height="28" rx="2"/><path d="M12 14h12M12 20h8"/><path d="M18 4V0M14 4l4-4 4 4" stroke-width="1.5"/></svg>
+                </div>
+                <h3>Upload or Auto-Detect</h3>
+                <p>Upload blueprints manually or let the system auto-detect new projects from PlanHub and ConstructConnect.</p>
+            </div>
+            <div class="step reveal">
+                <div class="step-num">2</div>
+                <div class="step-icon">
+                    <svg viewBox="0 0 36 36" fill="none" stroke="#E8650A" stroke-width="2"><circle cx="16" cy="16" r="10"/><path d="M23 23l8 8" stroke-linecap="round"/><circle cx="16" cy="16" r="4" stroke-dasharray="2 2"/></svg>
+                </div>
+                <h3>AI Scans Everything</h3>
+                <p>AI reads the specs for vendor requirements, identifies your trade sheets, counts every device from schedules and symbols.</p>
+            </div>
+            <div class="step reveal">
+                <div class="step-num">3</div>
+                <div class="step-icon">
+                    <svg viewBox="0 0 36 36" fill="none" stroke="#E8650A" stroke-width="2"><rect x="4" y="6" width="28" height="24" rx="2"/><path d="M4 14h28"/><path d="M12 20h12M12 26h8"/></svg>
+                </div>
+                <h3>Quote Generated</h3>
+                <p>Device counts expand to real vendor parts with your pricing. Professional proposal with scope narrative, qualifications, and pricing table.</p>
+            </div>
+            <div class="step reveal">
+                <div class="step-num">4</div>
+                <div class="step-icon">
+                    <svg viewBox="0 0 36 36" fill="none" stroke="#E8650A" stroke-width="2"><path d="M6 8l12 10L30 8"/><rect x="4" y="6" width="28" height="24" rx="2"/></svg>
+                </div>
+                <h3>Review and Send</h3>
+                <p>Review the quote on your dashboard. Adjust if needed. Click send and the PDF goes to the GC.</p>
+            </div>
         </div>
     </div>
-</div>
+</section>
 
-<!-- Problem / Comparison -->
-<section class="section">
+<!-- Trades -->
+<section class="section section-dark bp-grid" id="trades">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-label">Trades</div>
+            <h2>BUILT FOR EVERY TRADE</h2>
+            <p>One platform for any construction subcontractor.</p>
+        </div>
+        <div class="trades-grid">
+            <div class="trade-card reveal">
+                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6v20M24 6v20"/><path d="M8 12h16M8 20h16"/><circle cx="16" cy="16" r="2"/></svg>
+                <div><h3>Low-Voltage / Telecom</h3><p>Structured cabling, data drops, WiFi, patch panels, cable tray, MDF/IDF buildouts</p></div>
+            </div>
+            <div class="trade-card reveal">
+                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><circle cx="16" cy="12" r="6"/><path d="M16 18v6M10 28h12"/><circle cx="16" cy="12" r="2"/></svg>
+                <div><h3>Security and Access Control</h3><p>CCTV cameras, NVR, card readers, key fob access, intrusion detection, motion sensors</p></div>
+            </div>
+            <div class="trade-card reveal">
+                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><circle cx="16" cy="16" r="10"/><circle cx="16" cy="16" r="4"/><path d="M16 6v4M16 22v4M6 16h4M22 16h4"/></svg>
+                <div><h3>Audio Visual / Paging</h3><p>Speakers, paging systems, display mounts, conference room AV, intercom stations</p></div>
+            </div>
+            <div class="trade-card reveal">
+                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4v6M16 22v6"/><path d="M10 10l12 12M22 10L10 22"/><circle cx="16" cy="16" r="3"/></svg>
+                <div><h3>Fire Alarm</h3><p>FACP, smoke detectors, horn/strobes, pull stations, duct detectors, NAC circuits</p></div>
+            </div>
+            <div class="trade-card reveal">
+                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4l-4 10h8l-4 10"/><rect x="8" y="24" width="16" height="4" rx="1"/></svg>
+                <div><h3>Electrical</h3><p>Panels, breakers, wire, conduit, receptacles, lighting fixtures, generators, transfer switches</p></div>
+            </div>
+            <div class="trade-card reveal">
+                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 20c0-6 4-12 10-14c6 2 10 8 10 14"/><path d="M10 20h12"/><path d="M12 24h8"/><circle cx="16" cy="14" r="2"/></svg>
+                <div><h3>HVAC / Plumbing</h3><p>RTUs, ductwork, VAV boxes, thermostats, piping, fixtures, water heaters</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Comparison -->
+<section class="section section-light">
     <div class="container">
         <div class="section-header reveal">
             <div class="section-label">The Problem</div>
-            <h2>Your Estimator Costs More Than You Think</h2>
+            <h2>YOUR ESTIMATOR COSTS MORE THAN YOU THINK</h2>
             <p>Manual estimating is slow, expensive, and you still miss deadlines.</p>
         </div>
         <div class="comparison reveal">
-            <div class="comp-row comp-header"><div></div><div>Manual</div><div>BidEngine</div></div>
+            <div class="comp-row comp-header"><div></div><div>MANUAL</div><div>BIDENGINE</div></div>
             <div class="comp-row"><div class="label">Time per bid</div><div class="old">4-8 hours</div><div class="new">5 minutes</div></div>
-            <div class="comp-row"><div class="label">Monthly cost</div><div class="old">$5,000-7,000</div><div class="new">TBD</div></div>
+            <div class="comp-row"><div class="label">Monthly cost</div><div class="old">$5,000-7,000</div><div class="new">From $49</div></div>
             <div class="comp-row"><div class="label">Available</div><div class="old">Business hours</div><div class="new">24/7</div></div>
             <div class="comp-row"><div class="label">Part numbers</div><div class="old">Manual lookup</div><div class="new">Auto-populated</div></div>
             <div class="comp-row"><div class="label">Blueprint reading</div><div class="old">Print and mark up</div><div class="new">AI scans and counts</div></div>
@@ -360,41 +514,53 @@
 </section>
 
 <!-- Features -->
-<section class="section alt" id="features">
+<section class="section section-dark bp-grid" id="features">
     <div class="container">
         <div class="section-header reveal">
             <div class="section-label">Features</div>
-            <h2>Everything You Need to Bid and Win</h2>
+            <h2>EVERYTHING YOU NEED TO BID AND WIN</h2>
             <p>From blueprint to professional quote in one platform.</p>
         </div>
         <div class="feature-grid">
-            <div class="feature-card">
-                <div class="feature-icon">&#128196;</div>
+            <div class="feature-card reveal">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 3v18"/><circle cx="15" cy="15" r="2"/></svg>
+                </div>
                 <h3>AI Blueprint Scanning</h3>
                 <p>Upload plans. AI reads the drawing index, identifies your trade sheets, scans the symbol legend, and counts every device, fixture, and component automatically.</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">&#128203;</div>
+            <div class="feature-card reveal">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18"/><path d="M8 15h4M8 18h8"/></svg>
+                </div>
                 <h3>Professional Quotes</h3>
                 <p>Industry-standard proposals with real part numbers from your vendors. Equipment, labor, sales tax, scope narrative, qualifications, and purchase authorization.</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">&#128270;</div>
+            <div class="feature-card reveal">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5" stroke-linecap="round"/><path d="M8 11h6M11 8v6"/></svg>
+                </div>
                 <h3>Spec Scanner</h3>
                 <p>AI reads project specifications to identify approved manufacturers, cable colors, and product requirements. Automatically selects the right vendor parts for each project.</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">&#128225;</div>
+            <div class="feature-card reveal">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                </div>
                 <h3>Auto Bid Monitoring</h3>
                 <p>Scans PlanHub and ConstructConnect for new opportunities every 30 minutes. Downloads plans, analyzes scope, and generates quotes while you sleep.</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">&#128202;</div>
+            <div class="feature-card reveal">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+                </div>
                 <h3>Pipeline Dashboard</h3>
                 <p>Track every bid from discovery to won. Deadlines, GC contacts, quote status, device counts, and your win rate at a glance.</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">&#128190;</div>
+            <div class="feature-card reveal">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3v4a1 1 0 001 1h4"/><path d="M17 21H7a2 2 0 01-2-2V5a2 2 0 012-2h7l5 5v11a2 2 0 01-2 2z"/><path d="M12 11v6M9 14l3 3 3-3"/></svg>
+                </div>
                 <h3>One-Click PDF Delivery</h3>
                 <p>Generate a professional PDF quote and email it to the GC in one click. No formatting, no copy-paste, no mistakes.</p>
             </div>
@@ -402,52 +568,16 @@
     </div>
 </section>
 
-<!-- How It Works -->
-<section class="section" id="how-it-works">
-    <div class="container">
-        <div class="section-header reveal">
-            <div class="section-label">How It Works</div>
-            <h2>From Blueprint to Bid in 4 Steps</h2>
-        </div>
-        <div class="steps">
-            <div class="step"><div class="step-num">1</div><h3>Upload or Auto-Detect</h3><p>Upload blueprints manually or let the system auto-detect new projects from PlanHub and ConstructConnect.</p></div>
-            <div class="step"><div class="step-num">2</div><h3>AI Scans Everything</h3><p>AI reads the specs for vendor requirements, identifies your trade sheets, counts every device from schedules and symbols.</p></div>
-            <div class="step"><div class="step-num">3</div><h3>Quote Generated</h3><p>Device counts expand to real vendor parts with your pricing. Professional proposal with scope narrative, qualifications, and pricing table.</p></div>
-            <div class="step"><div class="step-num">4</div><h3>Review and Send</h3><p>Review the quote on your dashboard. Adjust if needed. Click send and the PDF goes to the GC.</p></div>
-        </div>
-    </div>
-</section>
-
-<!-- Trades -->
-<section class="section alt" id="trades">
-    <div class="container">
-        <div class="section-header reveal">
-            <div class="section-label">Trades</div>
-            <h2>Built for Every Trade</h2>
-            <p>One platform for any construction subcontractor.</p>
-        </div>
-        <div class="trades-grid">
-            <div class="trade-card"><div class="trade-icon">&#128268;</div><div><h3>Low-Voltage / Telecom</h3><p>Structured cabling, data drops, WiFi, patch panels, cable tray, MDF/IDF buildouts</p></div></div>
-            <div class="trade-card"><div class="trade-icon">&#128247;</div><div><h3>Security and Access Control</h3><p>CCTV cameras, NVR, card readers, key fob access, intrusion detection, motion sensors</p></div></div>
-            <div class="trade-card"><div class="trade-icon">&#127908;</div><div><h3>Audio Visual / Paging</h3><p>Speakers, paging systems, display mounts, conference room AV, intercom stations</p></div></div>
-            <div class="trade-card"><div class="trade-icon">&#128293;</div><div><h3>Fire Alarm</h3><p>FACP, smoke detectors, horn/strobes, pull stations, duct detectors, NAC circuits</p></div></div>
-            <div class="trade-card"><div class="trade-icon">&#9889;</div><div><h3>Electrical</h3><p>Panels, breakers, wire, conduit, receptacles, lighting fixtures, generators, transfer switches</p></div></div>
-            <div class="trade-card"><div class="trade-icon">&#10052;</div><div><h3>HVAC / Plumbing</h3><p>RTUs, ductwork, VAV boxes, thermostats, piping, fixtures, water heaters</p></div></div>
-        </div>
-    </div>
-</section>
-
-
 <!-- Case Study -->
-<section class="section alt">
+<section class="section section-light">
     <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
             <div class="section-label">Case Study</div>
-            <h2>Real Results</h2>
+            <h2>REAL RESULTS</h2>
         </div>
         <div class="case-study reveal">
             <div class="cs-label">Veteran-Owned Low-Voltage Sub -- DFW, Texas</div>
-            <h3>From manual estimates to AI-powered quotes in 3 days</h3>
+            <h3>FROM MANUAL ESTIMATES TO AI-POWERED QUOTES IN 3 DAYS</h3>
             <p>A veteran-owned low-voltage subcontractor was spending 4-8 hours per bid and missing deadlines regularly. After deploying BidEngine, the system auto-detected bid opportunities from PlanHub, scanned blueprints for device counts, and generated professional quotes with real vendor part numbers -- all without the owner touching a spreadsheet.</p>
             <div class="cs-stats">
                 <div class="cs-stat"><div class="num">10x</div><div class="label">More Bids Submitted</div></div>
@@ -460,66 +590,63 @@
 </section>
 
 <!-- Pricing -->
-<section class="section" id="pricing">
+<section class="section section-light" id="pricing" style="padding-top:0;">
     <div class="container">
         <div class="section-header reveal">
             <div class="section-label">Pricing</div>
-            <h2>Plans for Every Size Sub</h2>
-            <p>Book a demo and we'll find the right plan for your business.</p>
+            <h2>PLANS FOR EVERY SIZE SUB</h2>
+            <p>No contracts, no setup fees. Cancel anytime.</p>
         </div>
         <div class="pricing-grid">
-            <div class="price-card">
+            <div class="price-card reveal">
                 <div class="price-tier">Starter</div>
-                <div class="price-amount" style="font-size:1.8rem;">Book a Demo</div>
-                <div class="price-desc">For small shops getting started</div>
+                <div class="price-amount">$49<span>/mo</span></div>
+                <div class="price-desc">3 AI-analyzed bids per month</div>
                 <ul>
-                    <li>10 AI-analyzed bids per month</li>
                     <li>Blueprint scanning</li>
                     <li>Spec scanning</li>
                     <li>Professional PDF quotes</li>
                     <li>Pipeline dashboard</li>
                     <li>Email support</li>
                 </ul>
-                <a href="https://cal.com/darius-stroman-byeng8/30min" class="btn-primary" style="width:100%;text-align:center;" target="_blank">Get Started</a>
+                <a href="https://cal.com/darius-stroman-byeng8/30min" class="btn-primary" style="width:100%;text-align:center;" target="_blank">Book a Demo</a>
             </div>
-            <div class="price-card popular">
+            <div class="price-card popular reveal">
                 <div class="price-tier">Pro</div>
-                <div class="price-amount" style="font-size:1.8rem;">Book a Demo</div>
-                <div class="price-desc">For active bidders</div>
+                <div class="price-amount">$199<span>/mo</span></div>
+                <div class="price-desc">15 AI-analyzed bids per month</div>
                 <ul>
-                    <li>Unlimited AI-analyzed bids</li>
-                    <li>Blueprint + spec scanning</li>
+                    <li>Everything in Starter</li>
                     <li>PlanHub auto-monitoring</li>
                     <li>Vendor auto-selection</li>
                     <li>Custom pricing defaults</li>
                     <li>Priority support</li>
                 </ul>
-                <a href="https://cal.com/darius-stroman-byeng8/30min" class="btn-primary" style="width:100%;text-align:center;" target="_blank">Get Started</a>
+                <a href="https://cal.com/darius-stroman-byeng8/30min" class="btn-primary" style="width:100%;text-align:center;" target="_blank">Book a Demo</a>
             </div>
-            <div class="price-card">
-                <div class="price-tier">Enterprise</div>
-                <div class="price-amount" style="font-size:1.8rem;">Book a Demo</div>
-                <div class="price-desc">For large subs and multiple trades</div>
+            <div class="price-card reveal">
+                <div class="price-tier">Unlimited</div>
+                <div class="price-amount">$499<span>/mo</span></div>
+                <div class="price-desc">Unlimited AI-analyzed bids</div>
                 <ul>
                     <li>Everything in Pro</li>
                     <li>Multiple trade support</li>
                     <li>Custom integrations</li>
                     <li>API access</li>
                     <li>Dedicated account manager</li>
-                    <li>Custom quote templates</li>
                 </ul>
-                <a href="https://cal.com/darius-stroman-byeng8/30min" class="btn-primary" style="width:100%;text-align:center;" target="_blank">Contact Sales</a>
+                <a href="https://cal.com/darius-stroman-byeng8/30min" class="btn-primary" style="width:100%;text-align:center;" target="_blank">Book a Demo</a>
             </div>
         </div>
     </div>
 </section>
 
 <!-- FAQ -->
-<section class="section alt" id="faq">
+<section class="section section-light" id="faq" style="padding-top:0;">
     <div class="container">
         <div class="section-header reveal">
             <div class="section-label">FAQ</div>
-            <h2>Questions</h2>
+            <h2>QUESTIONS</h2>
         </div>
         <div class="faq-list">
             <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What trades does it support?<span class="chevron">&#9660;</span></div><div class="faq-a"><p>We support low-voltage/telecom, security and access control, fire alarm, electrical (Division 26), audio visual and paging, and HVAC/plumbing. If your trade isn't listed, contact us -- we can add custom trade support.</p></div></div>
@@ -541,15 +668,16 @@
 </section>
 
 <!-- Final CTA -->
-<section class="final-cta">
+<section class="final-cta section-dark bp-grid">
     <div class="container">
-        <h2>Stop Estimating.<br>Start <span style="color:var(--brand);">Winning.</span></h2>
+        <h2>STOP ESTIMATING.<br>START <span class="highlight">WINNING.</span></h2>
         <p>Join the subcontractors who bid faster, bid more, and win more.</p>
         <a href="https://cal.com/darius-stroman-byeng8/30min" class="btn-primary" target="_blank" style="font-size:1.1rem;padding:1rem 3rem;margin-bottom:2rem;">Book a Free Demo</a>
-        <div style="color:var(--text-dim);margin-bottom:1rem;font-size:0.9rem;">or join the waitlist</div>
-        <form class="email-form" onsubmit="event.preventDefault();var f=this,b=f.querySelector('button'),i=f.querySelector('input'),e=i.value;b.textContent='Adding...';b.disabled=true;fetch('https://n8n.myaibuffet.com/webhook/stromation-form',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:e,source:'bidengine',message:'BidEngine waitlist signup'})}).then(function(r){if(!r.ok)throw new Error('bad response');return r.json();}).then(function(){b.textContent='You are on the list';i.value='';}).catch(function(){b.textContent='Try again';b.disabled=false;});">
-            <input type="email" placeholder="your@email.com" required>
-            <button type="submit">Get Early Access</button>
+        <div style="color:var(--text-mid);margin:1.5rem 0 1rem;font-size:0.9rem;">or join the waitlist</div>
+        <form class="email-form" id="waitlistForm">
+            <input type="text" name="company_url" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <input type="email" name="email" placeholder="your@email.com" required>
+            <button type="submit">JOIN WAITLIST</button>
         </form>
     </div>
 </section>
@@ -559,13 +687,13 @@
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand">
-                <div style="font-size:1.2rem;font-weight:800;color:#fff;">Bid<span style="color:var(--brand);">Engine</span></div>
-                <p>AI-powered bid estimating for construction subcontractors. A product by <a href="https://www.stromation.com" style="color:var(--brand);display:inline;">Stromation</a>.</p>
+                <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:800;color:#fff;">BID<span style="color:var(--orange);">ENGINE</span></div>
+                <p>AI-powered bid estimating for construction subcontractors. A product by <a href="https://www.stromation.com" style="color:var(--orange);display:inline;">Stromation</a>.</p>
             </div>
             <div>
                 <h4>Product</h4>
-                <a href="#features">Features</a>
                 <a href="#how-it-works">How It Works</a>
+                <a href="#features">Features</a>
                 <a href="#trades">Trades</a>
                 <a href="#pricing">Pricing</a>
                 <a href="#faq">FAQ</a>
@@ -581,12 +709,8 @@
                 <h4>Contact</h4>
                 <a href="mailto:contact@stromation.com">contact@stromation.com</a>
                 <a href="tel:+18559320493">(855) 932-0493</a>
+                <a href="https://cal.com/darius-stroman-byeng8/30min" target="_blank">Book a Demo</a>
                 <div style="margin-top:1rem;">
-                    <div style="display:flex;align-items:center;gap:6px;color:var(--brand);font-size:0.8rem;">
-                        <span>&#128274;</span> Your data is encrypted and secure
-                    </div>
-                </div>
-                <div style="margin-top:0.75rem;">
                     <a href="https://www.stromation.com/privacy.html">Privacy</a>
                     <a href="https://www.stromation.com/terms.html">Terms</a>
                 </div>
@@ -599,20 +723,22 @@
 <script src="chat.js" defer></script>
 
 <!-- Sticky CTA -->
-<a href="https://cal.com/darius-stroman-byeng8/30min" class="sticky-cta" id="stickyCta" target="_blank">Book a Demo</a>
+<a href="https://cal.com/darius-stroman-byeng8/30min" class="sticky-cta" id="stickyCta" target="_blank">BOOK A DEMO</a>
 
 <script>
-// Scroll animations
+// Scroll reveal animations
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.15 });
 reveals.forEach(el => observer.observe(el));
 
-// Also add reveal to sections that don't have it yet
-document.querySelectorAll('.feature-card,.trade-card,.testimonial-card,.price-card,.step').forEach(el => {
-    el.classList.add('reveal');
-    observer.observe(el);
+// Also reveal cards/steps that may not have .reveal yet
+document.querySelectorAll('.feature-card,.trade-card,.price-card,.step').forEach(el => {
+    if(!el.classList.contains('reveal')){
+        el.classList.add('reveal');
+        observer.observe(el);
+    }
 });
 
 // Sticky CTA - show after scrolling past hero
@@ -621,7 +747,7 @@ window.addEventListener('scroll', () => {
     stickyCta.classList.toggle('show', window.scrollY > 600);
 });
 
-// Animated counting stats
+// Count-up animation for stats
 const countObserver = new IntersectionObserver((entries) => {
     entries.forEach(e => {
         if(e.isIntersecting && !e.target.dataset.counted) {
@@ -641,13 +767,57 @@ const countObserver = new IntersectionObserver((entries) => {
         }
     });
 }, { threshold: 0.5 });
-
 document.querySelectorAll('[data-target]').forEach(el => countObserver.observe(el));
+
+// Tally count animation (hero blueprint)
+var tallyEl = document.getElementById('tallyCount');
+if(tallyEl){
+    var tallyTarget = 14;
+    var tallyDelay = 300; // ms between each device ring
+    var tallyStart = setTimeout(function(){
+        var c = 0;
+        var ti = setInterval(function(){
+            c++;
+            tallyEl.textContent = c;
+            if(c >= tallyTarget) clearInterval(ti);
+        }, tallyDelay);
+    }, 300);
+}
 
 // FAQ accordion
 document.querySelectorAll('.faq-q').forEach(q => {
     q.addEventListener('click', () => q.parentElement.classList.toggle('open'));
 });
+
+// Waitlist form with honeypot + 3-second time gate
+(function(){
+    var form = document.getElementById('waitlistForm');
+    if(!form) return;
+    var loadTime = Date.now();
+    form.addEventListener('submit', function(e){
+        e.preventDefault();
+        var hp = form.querySelector('[name="company_url"]');
+        if(hp && hp.value) return; // bot filled honeypot
+        if(Date.now() - loadTime < 3000) return; // too fast
+        var emailInput = form.querySelector('[name="email"]');
+        var email = emailInput.value;
+        var btn = form.querySelector('button');
+        btn.textContent = 'ADDING...';
+        btn.disabled = true;
+        fetch('https://n8n.stromation.com/webhook/bidengine-signup',{
+            method:'POST',
+            headers:{'Content-Type':'application/json'},
+            body:JSON.stringify({email:email,source:'bidengine',message:'BidEngine waitlist signup'})
+        }).then(function(r){
+            if(!r.ok) throw new Error('bad response');
+            btn.textContent = 'YOU ARE ON THE LIST';
+            emailInput.value = '';
+        }).catch(function(){
+            btn.textContent = 'TRY AGAIN';
+            btn.disabled = false;
+        });
+    });
+})();
 </script>
 </body>
 </html>
