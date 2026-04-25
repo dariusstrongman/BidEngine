@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BidEngine blog — insights on AI bid estimating, construction takeoff, and winning more jobs as a subcontractor.">
+    <title>Blog — BidEngine by Stromation</title>
+    <link rel="canonical" href="https://bidengine.stromation.com/blog.html">
+    <meta property="og:title" content="Blog — BidEngine">
+    <meta property="og:description" content="Insights on AI bid estimating, construction takeoff, and winning more jobs as a subcontractor.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bidengine.stromation.com/blog.html">
+    <meta property="og:site_name" content="BidEngine">
+    <meta property="og:image" content="https://bidengine.stromation.com/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@stromationhq">
+    <meta name="twitter:title" content="Blog — BidEngine">
+    <meta name="twitter:description" content="Insights on AI bid estimating, construction takeoff, and winning more jobs as a subcontractor.">
+    <meta name="twitter:image" content="https://bidengine.stromation.com/og-image.png">
+    <link rel="alternate" type="application/rss+xml" title="BidEngine Blog" href="https://bidengine.stromation.com/feed.xml">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="og-image.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B6Z6XV02RT"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B6Z6XV02RT');</script>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+
+        :root{
+            --navy:#0F1F2E;
+            --navy-deep:#0A1520;
+            --navy-card:#1A2B3C;
+            --cream:#F5F5F0;
+            --cream2:#EEEEE8;
+            --orange:#E8650A;
+            --orange-hover:#C4520A;
+            --orange-dim:rgba(232,101,10,.08);
+            --orange-glow:rgba(232,101,10,.2);
+            --steel:#2E3F50;
+            --text-light:#D4D8DC;
+            --text-mid:#8A96A3;
+            --text-dark:#1C1C1E;
+            --text-dark2:#4A5568;
+            --green:#10B981;
+        }
+
+        body{font-family:'IBM Plex Sans',sans-serif;font-weight:400;background:var(--navy);color:var(--text-light);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+        a{color:inherit;text-decoration:none;}
+        h1,h2,h3,h4,h5,h6,.section-label,.btn,.nav-cta,.beta-badge,.stat-num,.step-num,.price-tier,.price-amount{font-family:'Barlow Condensed',sans-serif;}
+
+        /* Blueprint grid texture */
+        .bp-grid{position:relative;}
+        .bp-grid::after{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(232,101,10,.03) 0px,rgba(232,101,10,.03) 1px,transparent 1px,transparent 40px),repeating-linear-gradient(90deg,rgba(232,101,10,.03) 0px,rgba(232,101,10,.03) 1px,transparent 1px,transparent 40px);pointer-events:none;z-index:0;}
+
+        /* ===== NAV ===== */
+        .nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(15,31,46,0.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,0.06);padding:0;}
+        .nav-inner{max-width:1200px;margin:0 auto;padding:0.7rem 2rem;display:flex;align-items:center;justify-content:space-between;}
+        .nav-logo{display:flex;align-items:center;gap:0.5rem;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.35rem;color:#fff;letter-spacing:0.5px;}
+        .nav-logo svg{width:28px;height:28px;flex-shrink:0;}
+        .nav-logo .eng{color:var(--orange);}
+        .beta-badge{display:inline-block;background:var(--orange);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:0.6rem;font-weight:800;padding:2px 7px;border-radius:2px;margin-left:6px;letter-spacing:1.5px;text-transform:uppercase;vertical-align:middle;}
+        .nav-links{display:flex;gap:1.8rem;align-items:center;}
+        .nav-links a{font-size:0.85rem;color:var(--text-mid);transition:color 0.2s;font-weight:500;}
+        .nav-links a:hover{color:#fff;}
+        .nav-links a.active{color:#fff;}
+        .nav-cta{background:var(--orange);color:#fff !important;padding:0.5rem 1.3rem;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.9rem;letter-spacing:0.5px;text-transform:uppercase;transition:background 0.2s;}
+        .nav-cta:hover{background:var(--orange-hover);}
+        .mobile-toggle{display:none;cursor:pointer;flex-direction:column;gap:5px;}
+        .mobile-toggle span{width:24px;height:2px;background:#fff;}
+
+        /* ===== CONTAINER ===== */
+        .container{max-width:1200px;margin:0 auto;padding:0 2rem;position:relative;z-index:1;}
+
+        /* ===== BLOG HERO ===== */
+        .blog-hero{padding:8rem 0 4rem;background:var(--navy-deep);border-bottom:1px solid rgba(255,255,255,0.06);}
+        .blog-hero .section-label{color:var(--orange);font-family:'Barlow Condensed',sans-serif;font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:3px;margin-bottom:0.75rem;}
+        .blog-hero h1{font-size:3rem;font-weight:800;text-transform:uppercase;letter-spacing:-0.5px;color:#fff;margin-bottom:0.75rem;line-height:1.05;}
+        .blog-hero p{font-size:1.05rem;color:var(--text-mid);max-width:540px;line-height:1.7;}
+
+        /* ===== BLOG GRID ===== */
+        .blog-section{padding:4rem 0 6rem;}
+        .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+
+        /* ===== BLOG CARD ===== */
+        .blog-card{background:var(--navy-card);border:1px solid rgba(255,255,255,0.07);border-radius:6px;overflow:hidden;transition:border-color 0.2s,transform 0.2s;display:flex;flex-direction:column;}
+        .blog-card:hover{border-color:rgba(232,101,10,0.35);transform:translateY(-3px);}
+        .blog-card-body{padding:1.5rem;flex:1;display:flex;flex-direction:column;}
+        .blog-card-meta{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.9rem;}
+        .blog-card-tag{font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--orange);background:var(--orange-dim);padding:3px 8px;border-radius:2px;}
+        .blog-card-date{font-size:0.78rem;color:var(--text-mid);}
+        .blog-card h3{font-size:1.25rem;font-weight:800;text-transform:uppercase;letter-spacing:-0.3px;color:#fff;line-height:1.2;margin-bottom:0.6rem;}
+        .blog-card p{font-size:0.88rem;color:var(--text-mid);line-height:1.65;flex:1;}
+        .blog-card-footer{padding:1rem 1.5rem;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;}
+        .blog-card-read{font-family:'Barlow Condensed',sans-serif;font-size:0.78rem;color:var(--text-mid);}
+        .blog-card-link{font-family:'Barlow Condensed',sans-serif;font-size:0.82rem;font-weight:700;color:var(--orange);text-transform:uppercase;letter-spacing:0.5px;display:flex;align-items:center;gap:0.3rem;transition:gap 0.2s;}
+        .blog-card-link:hover{gap:0.55rem;}
+
+        /* ===== EMPTY STATE ===== */
+        .blog-empty{text-align:center;padding:5rem 2rem;background:var(--navy-card);border:1px solid rgba(255,255,255,0.07);border-radius:6px;}
+        .blog-empty-icon{width:56px;height:56px;margin:0 auto 1.5rem;opacity:0.35;}
+        .blog-empty h3{font-size:1.6rem;font-weight:800;text-transform:uppercase;color:#fff;margin-bottom:0.6rem;}
+        .blog-empty p{font-size:0.95rem;color:var(--text-mid);line-height:1.7;max-width:380px;margin:0 auto;}
+
+        /* ===== RSS BAR ===== */
+        .rss-bar{background:var(--navy-card);border-top:1px solid rgba(255,255,255,0.06);padding:1.25rem 0;}
+        .rss-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+        .rss-inner p{font-size:0.85rem;color:var(--text-mid);}
+        .rss-link{display:inline-flex;align-items:center;gap:0.4rem;font-family:'Barlow Condensed',sans-serif;font-size:0.82rem;font-weight:700;color:var(--orange);text-transform:uppercase;letter-spacing:0.5px;border:1px solid rgba(232,101,10,0.35);padding:0.35rem 0.9rem;border-radius:3px;transition:all 0.2s;}
+        .rss-link:hover{background:var(--orange-dim);}
+
+        /* ===== FOOTER ===== */
+        footer{background:var(--navy-deep);border-top:1px solid rgba(255,255,255,0.06);padding:2.5rem 0;}
+        .footer-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+        .footer-logo{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.1rem;color:#fff;opacity:0.7;}
+        .footer-logo span{color:var(--orange);}
+        .footer-links{display:flex;gap:1.5rem;flex-wrap:wrap;}
+        .footer-links a{font-size:0.82rem;color:var(--text-mid);transition:color 0.2s;}
+        .footer-links a:hover{color:#fff;}
+        .footer-copy{font-size:0.78rem;color:var(--text-mid);opacity:0.6;text-align:right;}
+
+        /* ===== RESPONSIVE ===== */
+        @media(max-width:900px){
+            .blog-grid{grid-template-columns:repeat(2,1fr);}
+        }
+        @media(max-width:640px){
+            .nav-links{display:none;position:absolute;top:100%;left:0;width:100%;background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);flex-direction:column;padding:1rem 2rem;gap:1rem;}
+            .nav-links.show{display:flex;}
+            .mobile-toggle{display:flex;}
+            .blog-hero h1{font-size:2.2rem;}
+            .blog-grid{grid-template-columns:1fr;}
+            .footer-inner{flex-direction:column;align-items:flex-start;}
+            .footer-copy{text-align:left;}
+        }
+    </style>
+</head>
+<body>
+
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">
+            <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="1" width="26" height="26" rx="3" stroke="#E8650A" stroke-width="2" fill="none"/>
+                <line x1="7" y1="8" x2="21" y2="8" stroke="#E8650A" stroke-width="1.5"/>
+                <line x1="7" y1="14" x2="21" y2="14" stroke="#E8650A" stroke-width="1.5"/>
+                <line x1="7" y1="20" x2="16" y2="20" stroke="#E8650A" stroke-width="1.5"/>
+                <line x1="5" y1="5" x2="5" y2="23" stroke="#E8650A" stroke-width="1" opacity="0.4"/>
+                <line x1="23" y1="5" x2="23" y2="23" stroke="#E8650A" stroke-width="1" opacity="0.4"/>
+            </svg>
+            BID<span class="eng">ENGINE</span><span class="beta-badge">BETA</span>
+        </a>
+        <div class="nav-links">
+            <a href="/#how-it-works">How It Works</a>
+            <a href="/#trades">Trades</a>
+            <a href="/#pricing">Pricing</a>
+            <a href="blog.html" class="active">Blog</a>
+            <a href="https://cal.com/darius-stroman-byeng8/30min" class="nav-cta" target="_blank">BOOK A DEMO</a>
+        </div>
+        <div class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- Blog Hero -->
+<section class="blog-hero bp-grid">
+    <div class="container">
+        <div class="section-label">BidEngine Blog</div>
+        <h1>Estimating Insights</h1>
+        <p>How to bid faster, win more jobs, and stop leaving money on the table. Written for subcontractors who do real work.</p>
+    </div>
+</section>
+
+<!-- Blog Posts -->
+<section class="blog-section">
+    <div class="container">
+
+<!-- BLOG_POSTS_START -->
+        <div class="blog-empty">
+            <svg class="blog-empty-icon" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="6" width="48" height="44" rx="4" stroke="#E8650A" stroke-width="2" fill="none"/>
+                <line x1="14" y1="18" x2="42" y2="18" stroke="#E8650A" stroke-width="2"/>
+                <line x1="14" y1="26" x2="42" y2="26" stroke="#E8650A" stroke-width="2"/>
+                <line x1="14" y1="34" x2="30" y2="34" stroke="#E8650A" stroke-width="2"/>
+            </svg>
+            <h3>New Posts Coming Soon</h3>
+            <p>We are putting together the first set of posts on AI estimating, blueprint takeoff, and bidding strategy. Check back shortly.</p>
+        </div>
+<!-- BLOG_POSTS_END -->
+
+    </div>
+</section>
+
+<!-- RSS Bar -->
+<div class="rss-bar">
+    <div class="rss-inner">
+        <p>Get new posts by RSS — no email required.</p>
+        <a href="feed.xml" class="rss-link">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="3" cy="11" r="1.5" fill="#E8650A"/><path d="M2 7.5C5.59 7.5 8.5 10.41 8.5 14" stroke="#E8650A" stroke-width="1.5" stroke-linecap="round" fill="none"/><path d="M2 3C8.07 3 13 7.93 13 14" stroke="#E8650A" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+            RSS Feed
+        </a>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-logo">BID<span>ENGINE</span></div>
+        <div class="footer-links">
+            <a href="/#how-it-works">How It Works</a>
+            <a href="/#trades">Trades</a>
+            <a href="/#pricing">Pricing</a>
+            <a href="blog.html">Blog</a>
+            <a href="https://www.stromation.com" target="_blank">By Stromation</a>
+        </div>
+        <div class="footer-copy">&copy; 2026 Stromation. All rights reserved.</div>
+    </div>
+</footer>
+
+<script defer src="chat.js"></script>
+</body>
+</html>

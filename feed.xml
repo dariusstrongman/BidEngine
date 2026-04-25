@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>BidEngine Blog</title>
+        <link>https://bidengine.stromation.com/blog.html</link>
+        <description>Insights on AI bid estimating, construction takeoff, and winning more jobs as a subcontractor.</description>
+        <language>en-us</language>
+        <managingEditor>darius@stromation.com (Darius Stroman)</managingEditor>
+        <webMaster>darius@stromation.com (Darius Stroman)</webMaster>
+        <copyright>2026 Stromation</copyright>
+        <atom:link href="https://bidengine.stromation.com/feed.xml" rel="self" type="application/rss+xml"/>
+        <!-- FEED_ITEMS_START -->
+        <!-- FEED_ITEMS_END -->
+    </channel>
+</rss>
