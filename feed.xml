@@ -11,5 +11,12 @@
         <atom:link href="https://bidengine.stromation.com/feed.xml" rel="self" type="application/rss+xml"/>
         <!-- FEED_ITEMS_START -->
         <!-- FEED_ITEMS_END -->
-    </channel>
+      <item>
+    <title>How to Win More Construction Bids as a Small Sub</title>
+    <link>https://bidengine.stromation.com/blog/how-to-win-more-construction-bids-as-a-small-sub.html</link>
+    <description>As a small subcontractor in the construction industry, winning bids can feel like a daunting task. With larger companies often having more resources and visi...</description>
+    <pubDate>Sun, 26 Apr 2026 16:00:19 GMT</pubDate>
+    <guid>https://bidengine.stromation.com/blog/how-to-win-more-construction-bids-as-a-small-sub.html</guid>
+  </item>
+</channel>
 </rss>
