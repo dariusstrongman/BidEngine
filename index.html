@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AI-powered bid estimating for construction subcontractors. Upload blueprints, get professional quotes with real vendor part numbers in minutes. Replace your estimator.">
+    <meta name="description" content="AI-powered bid estimating across every CSI division — from concrete and finishes to electrical, communications, and industrial systems. Upload any blueprint, get a professional quote with real vendor pricing in minutes.">
     <title>BidEngine by Stromation - AI Bid Estimating Engine for Construction Subcontractors</title>
     <link rel="canonical" href="https://bidengine.stromation.com/">
     <meta property="og:title" content="BidEngine - AI Bid Estimating for Construction Subs">
-    <meta property="og:description" content="Upload blueprints. Get professional quotes with real vendor part numbers in 5 minutes. Not 8 hours.">
+    <meta property="og:description" content="Estimating across every CSI division — concrete, electrical, HVAC, communications, security, and more. Upload any blueprint, get a professional quote in minutes.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://bidengine.stromation.com/">
     <meta property="og:site_name" content="BidEngine">
@@ -15,7 +15,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@stromationhq">
     <meta name="twitter:title" content="BidEngine - AI Bid Estimating Engine">
-    <meta name="twitter:description" content="Upload blueprints. Get professional quotes in 5 minutes.">
+    <meta name="twitter:description" content="Estimating across every CSI division. Upload any blueprint, get a professional quote in minutes.">
     <meta name="twitter:image" content="https://bidengine.stromation.com/og-image.png">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="apple-touch-icon" href="og-image.png">
@@ -25,11 +25,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B6Z6XV02RT"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B6Z6XV02RT');</script>
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"BidEngine","applicationCategory":"BusinessApplication","description":"AI-powered bid estimating tool for construction subcontractors.","url":"https://bidengine.stromation.com/","offers":[{"@type":"Offer","name":"Starter","price":"49","priceCurrency":"USD"},{"@type":"Offer","name":"Pro","price":"199","priceCurrency":"USD"},{"@type":"Offer","name":"Unlimited","price":"499","priceCurrency":"USD"}],"provider":{"@type":"Organization","name":"Stromation","url":"https://www.stromation.com"}}
+    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"BidEngine","applicationCategory":"BusinessApplication","description":"AI-powered bid estimating across every CSI division for construction contractors.","url":"https://bidengine.stromation.com/","offers":[{"@type":"Offer","name":"Starter","price":"49","priceCurrency":"USD"},{"@type":"Offer","name":"Pro","price":"199","priceCurrency":"USD"},{"@type":"Offer","name":"Unlimited","price":"499","priceCurrency":"USD"}],"provider":{"@type":"Organization","name":"Stromation","url":"https://www.stromation.com"}}
     </script>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-      {"@type":"Question","name":"What trades does BidEngine support?","acceptedAnswer":{"@type":"Answer","text":"We support low-voltage/telecom, security and access control, fire alarm, electrical, audio visual and paging, and HVAC/plumbing."}},
+      {"@type":"Question","name":"What divisions does BidEngine support?","acceptedAnswer":{"@type":"Answer","text":"BidEngine runs dedicated estimating engines for each CSI division: 03 Concrete, 09 Finishes, 21 Fire Suppression, 22 Plumbing, 23 HVAC, 26 Electrical, 27 Communications, 28 Electronic Safety and Security, 31-33 Civil and Site Work, and 40+ Industrial Systems."}},
       {"@type":"Question","name":"How accurate are the AI estimates?","acceptedAnswer":{"@type":"Answer","text":"The AI reads device schedules first, then verifies with symbol counting. When both sources agree, accuracy is 95%+."}},
       {"@type":"Question","name":"Can I use my own pricing?","acceptedAnswer":{"@type":"Answer","text":"Yes. You set your vendor prices, labor rates, overhead, profit margins, and tax rate."}},
       {"@type":"Question","name":"Does it work with PlanHub and ConstructConnect?","acceptedAnswer":{"@type":"Answer","text":"Yes. The system auto-monitors both platforms for new bid invitations every 30 minutes."}},
@@ -144,13 +144,13 @@
         .step h3{font-size:1.15rem;font-weight:700;text-transform:uppercase;letter-spacing:0.3px;margin-bottom:0.5rem;color:var(--text-dark);}
         .step p{color:var(--text-dark2);font-size:0.9rem;line-height:1.65;}
 
-        /* ===== TRADES ===== */
-        .trades-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
-        .trade-card{background:var(--navy-card);border:1px solid rgba(255,255,255,0.06);border-left:3px solid transparent;border-radius:4px;padding:1.5rem;display:flex;align-items:flex-start;gap:1rem;transition:all 0.3s;}
-        .trade-card:hover{border-left-color:var(--orange);background:rgba(232,101,10,0.04);}
-        .trade-card svg{width:32px;height:32px;flex-shrink:0;color:var(--orange);}
-        .trade-card h3{font-size:1rem;font-weight:700;color:#fff;margin-bottom:0.3rem;text-transform:uppercase;letter-spacing:0.3px;}
-        .trade-card p{color:var(--text-mid);font-size:0.85rem;line-height:1.55;}
+        /* ===== DIVISIONS ===== */
+        .divisions-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;}
+        .division-card{background:var(--navy-card);border:1px solid rgba(255,255,255,0.06);border-top:3px solid var(--orange);border-radius:4px;padding:1.4rem 1.2rem;display:flex;flex-direction:column;gap:0.5rem;transition:all 0.3s;min-height:170px;}
+        .division-card:hover{background:rgba(232,101,10,0.05);transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.3);}
+        .division-card .div-num{font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;font-weight:800;color:var(--orange);letter-spacing:1px;line-height:1;margin-bottom:0.15rem;}
+        .division-card h3{font-size:0.92rem;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:0.3px;margin-bottom:0.15rem;}
+        .division-card p{color:var(--text-mid);font-size:0.78rem;line-height:1.5;}
 
         /* ===== COMPARISON ===== */
         .comparison{max-width:750px;margin:0 auto;border-radius:4px;overflow:hidden;border:1px solid #ddd;}
@@ -252,7 +252,8 @@
             .hero-blueprint{max-width:400px;margin:0 auto;}
             .steps{grid-template-columns:1fr 1fr;gap:1.5rem;}
             .steps::before{display:none;}
-            .trades-grid{grid-template-columns:1fr;}
+            .divisions-grid{grid-template-columns:repeat(2,1fr);gap:0.75rem;}
+            .division-card{min-height:auto;padding:1.1rem 1rem;}
             .feature-grid{grid-template-columns:1fr;}
             .pricing-grid{grid-template-columns:1fr;}
             .comp-row{font-size:0.82rem;padding:0.8rem 1rem;}
@@ -283,7 +284,7 @@
         </a>
         <div class="nav-links">
             <a href="#how-it-works">How It Works</a>
-            <a href="#trades">Trades</a>
+            <a href="#divisions">Divisions</a>
             <a href="#features">Features</a>
             <a href="#pricing">Pricing</a>
             <a href="#faq">FAQ</a>
@@ -301,7 +302,7 @@
         <div class="hero-grid">
             <div>
                 <h1>WIN MORE BIDS.<br><span class="highlight">ESTIMATE IN MINUTES.</span></h1>
-                <p class="sub">Upload your blueprints. BidEngine counts every device and builds your quote automatically.</p>
+                <p class="sub">Upload any blueprint. BidEngine estimates across every CSI division — concrete to electrical to industrial — and builds your quote automatically.</p>
                 <div class="hero-ctas">
                     <a href="https://cal.com/darius-stroman-byeng8/30min" class="btn-primary" target="_blank">Book a Free Demo</a>
                     <a href="#how-it-works" class="btn-secondary">See How It Works</a>
@@ -309,7 +310,7 @@
                 <div class="stats-bar">
                     <div class="stat-item"><div class="stat-num"><span data-target="5" data-suffix=" min">0</span></div><div class="stat-label">Average bid time</div></div>
                     <div class="stat-item"><div class="stat-num"><span data-target="98" data-suffix="%">0</span></div><div class="stat-label">Cost reduction</div></div>
-                    <div class="stat-item"><div class="stat-num"><span data-target="6">0</span></div><div class="stat-label">Trades supported</div></div>
+                    <div class="stat-item"><div class="stat-num"><span data-target="10" data-suffix="+">0</span></div><div class="stat-label">CSI Divisions</div></div>
                     <div class="stat-item"><div class="stat-num">24/7</div><div class="stat-label">Bid monitoring</div></div>
                 </div>
             </div>
@@ -455,38 +456,54 @@
     </div>
 </section>
 
-<!-- Trades -->
-<section class="section section-dark bp-grid" id="trades">
+<!-- Divisions -->
+<section class="section section-dark bp-grid" id="divisions">
     <div class="container">
         <div class="section-header reveal">
-            <div class="section-label">Trades</div>
-            <h2>BUILT FOR EVERY TRADE</h2>
-            <p>One platform for any construction subcontractor.</p>
+            <div class="section-label">Divisions</div>
+            <h2>BUILT FOR EVERY DIVISION</h2>
+            <p>Dedicated estimating engines for each CSI division — so every quote reflects how that specific trade actually prices work.</p>
         </div>
-        <div class="trades-grid">
-            <div class="trade-card reveal">
-                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6v20M24 6v20"/><path d="M8 12h16M8 20h16"/><circle cx="16" cy="16" r="2"/></svg>
-                <div><h3>Low-Voltage / Telecom</h3><p>Structured cabling, data drops, WiFi, patch panels, cable tray, MDF/IDF buildouts</p></div>
+        <div class="divisions-grid">
+            <div class="division-card reveal">
+                <div class="div-num">03</div>
+                <div><h3>Concrete</h3><p>Slabs, footings, walls, formwork, rebar, finishing</p></div>
             </div>
-            <div class="trade-card reveal">
-                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><circle cx="16" cy="12" r="6"/><path d="M16 18v6M10 28h12"/><circle cx="16" cy="12" r="2"/></svg>
-                <div><h3>Security and Access Control</h3><p>CCTV cameras, NVR, card readers, key fob access, intrusion detection, motion sensors</p></div>
+            <div class="division-card reveal">
+                <div class="div-num">09</div>
+                <div><h3>Finishes</h3><p>Drywall, paint, flooring, ceilings, tile, wall coverings</p></div>
             </div>
-            <div class="trade-card reveal">
-                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><circle cx="16" cy="16" r="10"/><circle cx="16" cy="16" r="4"/><path d="M16 6v4M16 22v4M6 16h4M22 16h4"/></svg>
-                <div><h3>Audio Visual / Paging</h3><p>Speakers, paging systems, display mounts, conference room AV, intercom stations</p></div>
+            <div class="division-card reveal">
+                <div class="div-num">21</div>
+                <div><h3>Fire Suppression</h3><p>Sprinkler heads, risers, standpipes, valves, pipe runs</p></div>
             </div>
-            <div class="trade-card reveal">
-                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4v6M16 22v6"/><path d="M10 10l12 12M22 10L10 22"/><circle cx="16" cy="16" r="3"/></svg>
-                <div><h3>Fire Alarm</h3><p>FACP, smoke detectors, horn/strobes, pull stations, duct detectors, NAC circuits</p></div>
+            <div class="division-card reveal">
+                <div class="div-num">22</div>
+                <div><h3>Plumbing</h3><p>Fixtures, water heaters, piping, valves, drains, gas lines</p></div>
             </div>
-            <div class="trade-card reveal">
-                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4l-4 10h8l-4 10"/><rect x="8" y="24" width="16" height="4" rx="1"/></svg>
-                <div><h3>Electrical</h3><p>Panels, breakers, wire, conduit, receptacles, lighting fixtures, generators, transfer switches</p></div>
+            <div class="division-card reveal">
+                <div class="div-num">23</div>
+                <div><h3>HVAC</h3><p>RTUs, AHUs, ductwork, VAV boxes, refrigerant lines, controls</p></div>
             </div>
-            <div class="trade-card reveal">
-                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 20c0-6 4-12 10-14c6 2 10 8 10 14"/><path d="M10 20h12"/><path d="M12 24h8"/><circle cx="16" cy="14" r="2"/></svg>
-                <div><h3>HVAC / Plumbing</h3><p>RTUs, ductwork, VAV boxes, thermostats, piping, fixtures, water heaters</p></div>
+            <div class="division-card reveal">
+                <div class="div-num">26</div>
+                <div><h3>Electrical</h3><p>Panels, breakers, conduit, wire, lighting, gear, generators</p></div>
+            </div>
+            <div class="division-card reveal">
+                <div class="div-num">27</div>
+                <div><h3>Communications</h3><p>Data drops, fiber, structured cabling, low voltage, MDF/IDF</p></div>
+            </div>
+            <div class="division-card reveal">
+                <div class="div-num">28</div>
+                <div><h3>Safety &amp; Security</h3><p>Fire alarm, CCTV, access control, intrusion, mass notification</p></div>
+            </div>
+            <div class="division-card reveal">
+                <div class="div-num">31&ndash;33</div>
+                <div><h3>Civil &amp; Site Work</h3><p>Excavation, grading, paving, utilities, drainage, earthwork</p></div>
+            </div>
+            <div class="division-card reveal">
+                <div class="div-num">40+</div>
+                <div><h3>Industrial Systems</h3><p>Process piping, instrumentation, integrated automation</p></div>
             </div>
         </div>
     </div>
@@ -649,7 +666,7 @@
             <h2>QUESTIONS</h2>
         </div>
         <div class="faq-list">
-            <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What trades does it support?<span class="chevron">&#9660;</span></div><div class="faq-a"><p>We support low-voltage/telecom, security and access control, fire alarm, electrical (Division 26), audio visual and paging, and HVAC/plumbing. If your trade isn't listed, contact us -- we can add custom trade support.</p></div></div>
+            <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What divisions does it support?<span class="chevron">&#9660;</span></div><div class="faq-a"><p>BidEngine runs dedicated estimating engines for each CSI division: 03 Concrete, 09 Finishes, 21 Fire Suppression, 22 Plumbing, 23 HVAC, 26 Electrical, 27 Communications, 28 Electronic Safety &amp; Security, 31-33 Civil and Site Work, and 40+ Industrial Systems. New division modules are continuously added based on real-world contractor use.</p></div></div>
             <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How accurate are the AI estimates?<span class="chevron">&#9660;</span></div><div class="faq-a"><p>The AI reads device schedules first (most accurate), then verifies with symbol counting. When both sources agree, accuracy is 95%+. You can always adjust counts before sending the quote.</p></div></div>
             <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What if blueprints aren't available?<span class="chevron">&#9660;</span></div><div class="faq-a"><p>The system can estimate from project description, building type, and square footage using industry standards. These are clearly marked so you know the confidence level.</p></div></div>
             <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Can I use my own pricing?<span class="chevron">&#9660;</span></div><div class="faq-a"><p>Yes. You set your vendor prices, labor rates, overhead, profit margins, and tax rate. The system uses your numbers for every quote.</p></div></div>
@@ -694,7 +711,7 @@
                 <h4>Product</h4>
                 <a href="#how-it-works">How It Works</a>
                 <a href="#features">Features</a>
-                <a href="#trades">Trades</a>
+                <a href="#divisions">Divisions</a>
                 <a href="#pricing">Pricing</a>
                 <a href="#faq">FAQ</a>
             </div>
@@ -734,7 +751,7 @@ const observer = new IntersectionObserver((entries) => {
 reveals.forEach(el => observer.observe(el));
 
 // Also reveal cards/steps that may not have .reveal yet
-document.querySelectorAll('.feature-card,.trade-card,.price-card,.step').forEach(el => {
+document.querySelectorAll('.feature-card,.division-card,.price-card,.step').forEach(el => {
     if(!el.classList.contains('reveal')){
         el.classList.add('reveal');
         observer.observe(el);
