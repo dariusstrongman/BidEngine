@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://bidengine.stromation.com/</loc>
-        <lastmod>2026-04-04</lastmod>
+        <lastmod>2026-04-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -13,4 +13,14 @@
         <priority>0.7</priority>
     </url>
   <url><loc>https://bidengine.stromation.com/blog/how-to-win-more-construction-bids-as-a-small-sub.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://bidengine.stromation.com/divisions/concrete.html</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://bidengine.stromation.com/divisions/finishes.html</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://bidengine.stromation.com/divisions/fire-suppression.html</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://bidengine.stromation.com/divisions/plumbing.html</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://bidengine.stromation.com/divisions/hvac.html</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://bidengine.stromation.com/divisions/electrical.html</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://bidengine.stromation.com/divisions/communications.html</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://bidengine.stromation.com/divisions/safety-security.html</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://bidengine.stromation.com/divisions/civil-site-work.html</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://bidengine.stromation.com/divisions/industrial-systems.html</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>

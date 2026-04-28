@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI-powered electrical bid estimating. Upload your electrical plans and get panel schedules, conduit footage, fixture counts, gear pricing, and generator sizing in minutes.">
+    <title>AI Electrical Bid Estimating | BidEngine</title>
+    <link rel="canonical" href="https://bidengine.stromation.com/divisions/electrical.html">
+    <meta property="og:title" content="AI Electrical Bid Estimating">
+    <meta property="og:description" content="AI-powered electrical bid estimating. Upload your electrical plans and get panel schedules, conduit footage, fixture counts, gear pricing, and generator sizing in minutes.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bidengine.stromation.com/divisions/electrical.html">
+    <meta property="og:site_name" content="BidEngine">
+    <meta property="og:image" content="https://bidengine.stromation.com/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@stromationhq">
+    <meta name="twitter:title" content="AI Electrical Bid Estimating">
+    <meta name="twitter:description" content="AI-powered electrical bid estimating. Upload your electrical plans and get panel schedules, conduit footage, fixture counts, gear pricing, and generator sizing in minutes.">
+    <meta name="twitter:image" content="https://bidengine.stromation.com/og-image.png">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" href="/og-image.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=IBM+Plex+Sans:wght@400;500&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B6Z6XV02RT"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B6Z6XV02RT');</script>
+    <script type="application/ld+json">
+    {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://bidengine.stromation.com/"}, {"@type": "ListItem", "position": 2, "name": "Divisions", "item": "https://bidengine.stromation.com/#divisions"}, {"@type": "ListItem", "position": 3, "name": "Electrical", "item": "https://bidengine.stromation.com/divisions/electrical.html"}]}
+    {"@context": "https://schema.org", "@type": "Service", "serviceType": "AI Bid Estimating for Electrical (CSI Division 26)", "provider": {"@type": "Organization", "name": "BidEngine", "url": "https://bidengine.stromation.com/", "parentOrganization": {"@type": "Organization", "name": "Stromation", "url": "https://www.stromation.com"}}, "areaServed": "United States", "description": "AI-powered electrical bid estimating. Upload your electrical plans and get panel schedules, conduit footage, fixture counts, gear pricing, and generator sizing in minutes."}
+    </script>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        :root{
+            --navy:#0F1F2E;--navy-deep:#0A1520;--navy-card:#1A2B3C;
+            --cream:#F5F5F0;--cream2:#EEEEE8;
+            --orange:#E8650A;--orange-hover:#C4520A;
+            --orange-dim:rgba(232,101,10,.08);--orange-glow:rgba(232,101,10,.2);
+            --steel:#2E3F50;
+            --text-light:#D4D8DC;--text-mid:#8A96A3;--text-dark:#1C1C1E;--text-dark2:#4A5568;
+            --green:#10B981;
+        }
+        body{font-family:'IBM Plex Sans',sans-serif;font-weight:400;background:var(--navy);color:var(--text-light);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+        a{color:inherit;text-decoration:none;}
+        h1,h2,h3,h4,h5,h6,.section-label,.btn,.nav-cta,.beta-badge,.stat-num,.div-num,.comp-header{font-family:'Barlow Condensed',sans-serif;}
+        .bp-grid{position:relative;}
+        .bp-grid::after{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(232,101,10,.03) 0px,rgba(232,101,10,.03) 1px,transparent 1px,transparent 40px),repeating-linear-gradient(90deg,rgba(232,101,10,.03) 0px,rgba(232,101,10,.03) 1px,transparent 1px,transparent 40px);pointer-events:none;z-index:0;}
+
+        /* ===== NAV ===== */
+        .nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(15,31,46,0.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,0.06);padding:0;}
+        .nav-inner{max-width:1200px;margin:0 auto;padding:0.7rem 2rem;display:flex;align-items:center;justify-content:space-between;}
+        .nav-logo{display:flex;align-items:center;gap:0.5rem;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.35rem;color:#fff;letter-spacing:0.5px;}
+        .nav-logo svg{width:28px;height:28px;flex-shrink:0;}
+        .nav-logo .eng{color:var(--orange);}
+        .beta-badge{display:inline-block;background:var(--orange);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:0.6rem;font-weight:800;padding:2px 7px;border-radius:2px;margin-left:6px;letter-spacing:1.5px;text-transform:uppercase;vertical-align:middle;}
+        .nav-links{display:flex;gap:1.8rem;align-items:center;}
+        .nav-links a{font-size:0.85rem;color:var(--text-mid);transition:color 0.2s;font-weight:500;}
+        .nav-links a:hover{color:#fff;}
+        .nav-cta{background:var(--orange);color:#fff !important;padding:0.5rem 1.3rem;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.9rem;letter-spacing:0.5px;text-transform:uppercase;transition:background 0.2s;}
+        .nav-cta:hover{background:var(--orange-hover);}
+        .mobile-toggle{display:none;cursor:pointer;flex-direction:column;gap:5px;}
+        .mobile-toggle span{width:24px;height:2px;background:#fff;}
+
+        /* ===== SECTIONS ===== */
+        .section{padding:5rem 0;position:relative;}
+        .section-dark{background:var(--navy);color:var(--text-light);}
+        .section-light{background:var(--cream);color:var(--text-dark);}
+        .container{max-width:1200px;margin:0 auto;padding:0 2rem;position:relative;z-index:1;}
+        .section-header{text-align:center;margin-bottom:3rem;}
+        .section-header h2{font-size:2.4rem;font-weight:800;text-transform:uppercase;letter-spacing:-0.5px;line-height:1.1;margin-bottom:0.75rem;}
+        .section-dark .section-header h2{color:#fff;}
+        .section-light .section-header h2{color:var(--text-dark);}
+        .section-header p{font-size:1.05rem;max-width:680px;margin:0 auto;line-height:1.7;}
+        .section-dark .section-header p{color:var(--text-mid);}
+        .section-light .section-header p{color:var(--text-dark2);}
+        .section-label{color:var(--orange);font-family:'Barlow Condensed',sans-serif;font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:3px;margin-bottom:0.5rem;}
+
+        /* ===== BUTTONS ===== */
+        .btn-primary{display:inline-block;background:var(--orange);color:#fff;padding:0.85rem 2rem;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;text-transform:uppercase;letter-spacing:0.5px;border:none;cursor:pointer;transition:all 0.2s;}
+        .btn-primary:hover{background:var(--orange-hover);transform:translateY(-2px);box-shadow:0 6px 24px var(--orange-glow);}
+        .btn-secondary{display:inline-block;background:transparent;color:var(--orange);padding:0.85rem 2rem;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;text-transform:uppercase;letter-spacing:0.5px;border:2px solid var(--orange);cursor:pointer;transition:all 0.2s;}
+        .btn-secondary:hover{background:var(--orange);color:#fff;}
+
+        /* ===== HERO (division) ===== */
+        .div-hero{padding:7.5rem 0 4rem;position:relative;overflow:hidden;}
+        .div-hero .breadcrumb{font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;color:var(--text-mid);text-transform:uppercase;letter-spacing:2px;margin-bottom:0.8rem;}
+        .div-hero .breadcrumb a{color:var(--text-mid);}
+        .div-hero .breadcrumb a:hover{color:var(--orange);}
+        .div-hero .breadcrumb .sep{margin:0 0.6rem;opacity:0.6;}
+        .div-hero h1{font-size:3.4rem;font-weight:800;text-transform:uppercase;line-height:1.05;color:#fff;letter-spacing:-1px;margin-bottom:1.2rem;max-width:900px;}
+        .div-hero h1 .hl{color:var(--orange);}
+        .div-hero .sub{font-size:1.1rem;color:var(--text-mid);line-height:1.7;margin-bottom:2.2rem;max-width:780px;}
+        .div-hero .ctas{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.6rem;}
+        .div-hero .stats{display:flex;gap:2.5rem;flex-wrap:wrap;}
+        .stat-item{text-align:left;}
+        .stat-num{font-size:1.8rem;font-weight:800;color:var(--orange);font-family:'Barlow Condensed',sans-serif;letter-spacing:-0.5px;line-height:1;}
+        .stat-label{font-size:0.78rem;color:var(--text-mid);margin-top:0.3rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;}
+
+        /* ===== ESTIMATE GRID ===== */
+        .estimate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
+        .estimate-card{background:var(--navy-card);border:1px solid rgba(255,255,255,0.06);border-left:3px solid var(--orange);border-radius:4px;padding:1.5rem 1.4rem;transition:all 0.3s;}
+        .estimate-card:hover{background:rgba(232,101,10,0.04);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.3);}
+        .estimate-card h3{font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:0.4rem;text-transform:uppercase;letter-spacing:0.3px;}
+        .estimate-card p{color:var(--text-mid);font-size:0.88rem;line-height:1.6;}
+
+        /* ===== SAMPLE BID ===== */
+        .sample-wrap{max-width:1100px;margin:0 auto;background:#FAFAF7;border-radius:4px;overflow:hidden;border:1px solid #DDD;box-shadow:0 18px 50px rgba(0,0,0,0.4);}
+        .sample-head{background:var(--navy-deep);color:#fff;padding:1.2rem 1.8rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.8rem;}
+        .sample-head .label{font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;font-weight:700;color:var(--orange);letter-spacing:3px;text-transform:uppercase;margin-bottom:0.3rem;}
+        .sample-head .proj{font-size:0.95rem;color:var(--text-light);font-weight:500;}
+        .sample-head .meta{font-family:'JetBrains Mono','SF Mono',Menlo,monospace;font-size:0.75rem;color:var(--text-mid);letter-spacing:0.5px;}
+        .sample-grid{display:grid;grid-template-columns:60px 1fr 130px 110px 140px;background:#EEEEE6;padding:0.85rem 1.8rem;border-bottom:1px solid #DDD;font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:#5C6773;}
+        .sample-row{display:grid;grid-template-columns:60px 1fr 130px 110px 140px;padding:0.85rem 1.8rem;border-bottom:1px solid #EEEEE6;font-size:0.92rem;color:#1C1C1E;align-items:center;}
+        .sample-row:nth-child(even){background:#F4F4ED;}
+        .sample-row:nth-child(odd){background:#FAFAF7;}
+        .sample-row .div-num{font-family:'Barlow Condensed',sans-serif;font-weight:800;color:var(--orange);font-size:1.1rem;}
+        .sample-row .desc{font-weight:600;}
+        .sample-row .desc small{display:block;font-weight:400;font-size:0.78rem;color:#6B7280;margin-top:0.15rem;}
+        .sample-row .right{text-align:right;font-family:'JetBrains Mono','SF Mono',Menlo,monospace;font-weight:600;}
+        .sample-row .ext{text-align:right;font-family:'JetBrains Mono','SF Mono',Menlo,monospace;font-weight:700;color:#1C1C1E;}
+        .sample-total{display:grid;grid-template-columns:60px 1fr 130px 110px 140px;padding:1.2rem 1.8rem;background:var(--orange);color:#fff;}
+        .sample-total .label{grid-column:4;text-align:right;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.1rem;letter-spacing:1.5px;text-transform:uppercase;}
+        .sample-total .amt{text-align:right;font-family:'JetBrains Mono','SF Mono',Menlo,monospace;font-weight:700;font-size:1.3rem;}
+
+        /* ===== WHY ===== */
+        .why-block{max-width:880px;margin:0 auto;background:var(--navy-card);border:1px solid rgba(255,255,255,0.06);border-left:3px solid var(--orange);border-radius:4px;padding:2rem 2.4rem;}
+        .why-block p{color:var(--text-light);font-size:1.05rem;line-height:1.8;}
+
+        /* ===== OTHER DIVISIONS ===== */
+        .other-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+        .other-card{background:var(--navy-card);border:1px solid rgba(255,255,255,0.06);border-top:3px solid var(--orange);border-radius:4px;padding:1.2rem 1.1rem;display:flex;flex-direction:column;gap:0.4rem;transition:all 0.3s;color:inherit;}
+        .other-card:hover{background:rgba(232,101,10,0.05);transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,0.3);}
+        .other-card .div-num{font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:800;color:var(--orange);letter-spacing:1px;line-height:1;}
+        .other-card h3{font-size:0.85rem;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:0.3px;margin-bottom:0;}
+        .other-card .arrow{margin-top:0.4rem;color:var(--orange);font-size:0.75rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;font-family:'Barlow Condensed',sans-serif;}
+
+        /* ===== FINAL CTA ===== */
+        .final-cta{padding:5rem 0;text-align:center;position:relative;overflow:hidden;}
+        .final-cta h2{font-size:2.4rem;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:-0.5px;margin-bottom:1rem;}
+        .final-cta h2 .hl{color:var(--orange);}
+        .final-cta p{color:var(--text-mid);font-size:1.05rem;margin-bottom:2rem;max-width:560px;margin-left:auto;margin-right:auto;}
+
+        /* ===== FOOTER ===== */
+        .footer{background:var(--navy-deep);padding:3rem 0 2rem;border-top:1px solid rgba(255,255,255,0.06);}
+        .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2rem;margin-bottom:2rem;}
+        .footer-brand p{color:var(--text-mid);font-size:0.85rem;line-height:1.6;margin-top:0.5rem;}
+        .footer h4{font-family:'Barlow Condensed',sans-serif;font-size:0.8rem;color:var(--text-mid);text-transform:uppercase;letter-spacing:2px;margin-bottom:1rem;font-weight:700;}
+        .footer a{display:block;color:var(--text-mid);font-size:0.85rem;padding:0.2rem 0;transition:color 0.2s;}
+        .footer a:hover{color:#fff;}
+        .footer-bottom{text-align:center;color:var(--steel);font-size:0.8rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.06);}
+
+        @media(max-width:768px){
+            .nav-links{display:none;position:absolute;top:100%;left:0;width:100%;background:var(--navy);border-top:1px solid rgba(255,255,255,0.06);flex-direction:column;padding:1rem 2rem;gap:1rem;}
+            .nav-links.show{display:flex;}
+            .mobile-toggle{display:flex !important;}
+            .div-hero{padding:6rem 0 3rem;}
+            .div-hero h1{font-size:2.2rem;}
+            .div-hero .stats{gap:1.4rem;}
+            .estimate-grid{grid-template-columns:1fr;}
+            .other-grid{grid-template-columns:repeat(2,1fr);}
+            .footer-grid{grid-template-columns:1fr;}
+            .section-header h2{font-size:1.9rem;}
+            .final-cta h2{font-size:1.8rem;}
+            .sample-grid,.sample-row,.sample-total{grid-template-columns:50px 1fr 90px 90px 110px;padding-left:1rem;padding-right:1rem;font-size:0.8rem;}
+            .sample-total .amt{font-size:1.05rem;}
+            .why-block{padding:1.4rem 1.4rem;}
+        }
+        @media(min-width:769px){.mobile-toggle{display:none !important;}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">
+            <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="1" width="26" height="26" rx="3" stroke="#E8650A" stroke-width="2" fill="none"/>
+                <line x1="7" y1="8" x2="21" y2="8" stroke="#E8650A" stroke-width="1.5"/>
+                <line x1="7" y1="14" x2="21" y2="14" stroke="#E8650A" stroke-width="1.5"/>
+                <line x1="7" y1="20" x2="16" y2="20" stroke="#E8650A" stroke-width="1.5"/>
+                <line x1="5" y1="5" x2="5" y2="23" stroke="#E8650A" stroke-width="1" opacity="0.4"/>
+                <line x1="23" y1="5" x2="23" y2="23" stroke="#E8650A" stroke-width="1" opacity="0.4"/>
+            </svg>
+            BID<span class="eng">ENGINE</span><span class="beta-badge">BETA</span>
+        </a>
+        <div class="nav-links">
+            <a href="/#how-it-works">How It Works</a>
+            <a href="/#divisions">Divisions</a>
+            <a href="/#features">Features</a>
+            <a href="/#pricing">Pricing</a>
+            <a href="/#faq">FAQ</a>
+            <a href="https://cal.com/darius-stroman-byeng8/30min" class="nav-cta" target="_blank">BOOK A DEMO</a>
+        </div>
+        <div class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="div-hero section-dark bp-grid">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="/">Home</a>
+            <span class="sep">&rsaquo;</span>
+            <a href="/#divisions">Divisions</a>
+            <span class="sep">&rsaquo;</span>
+            <span>Division 26 &mdash; Electrical</span>
+        </div>
+        <h1>AI Estimating for <span class="hl">Electrical</span> Contractors</h1>
+        <p class="sub">Panels, breakers, conduit, wire, lighting, gear, generators, transfer switches. BidEngine's electrical engine reads your one-line, panel schedule, and lighting plan to price the rough, gear, and trim in one bid.</p>
+        <div class="ctas">
+            <a href="https://cal.com/darius-stroman-byeng8/30min" class="btn-primary" target="_blank">Book a Free Demo</a>
+            <a href="/#how-it-works" class="btn-secondary">See How It Works</a>
+        </div>
+        <div class="stats">
+            <div class="stat-item"><div class="stat-num">5 MIN</div><div class="stat-label">Per Bid</div></div>
+            <div class="stat-item"><div class="stat-num">NEC 2023</div><div class="stat-label">Code Aware</div></div>
+            <div class="stat-item"><div class="stat-num">98%</div><div class="stat-label">Quantity Accuracy</div></div>
+            <div class="stat-item"><div class="stat-num">24/7</div><div class="stat-label">Available</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- What we estimate -->
+<section class="section section-dark bp-grid">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-label">What BidEngine Measures</div>
+            <h2>Built for Division 26 Electrical</h2>
+            <p>The quantities your estimator looks for first &mdash; counted, sized, and priced from the plan set.</p>
+        </div>
+        <div class="estimate-grid">
+            <div class="estimate-card">
+                <h3>Panels &amp; Breakers</h3>
+                <p>Panel count and breaker schedule from the panel schedules and one-line.</p>
+            </div>
+            <div class="estimate-card">
+                <h3>LF Conduit by Type</h3>
+                <p>EMT, IMC, RGS, PVC by size from rough-in plans.</p>
+            </div>
+            <div class="estimate-card">
+                <h3>LF Wire by Size</h3>
+                <p>Wire pulls by AWG and conductor count, including grounds.</p>
+            </div>
+            <div class="estimate-card">
+                <h3># Receptacles &amp; Switches</h3>
+                <p>Standard, GFCI, USB, dimmer, occupancy sensor counts.</p>
+            </div>
+            <div class="estimate-card">
+                <h3>Light Fixtures</h3>
+                <p>Fixture counts by type from the fixture schedule, with controls.</p>
+            </div>
+            <div class="estimate-card">
+                <h3>Gear &amp; Distribution</h3>
+                <p>Switchgear, transformers, generators, ATS, and feeder sizing.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sample bid -->
+<section class="section section-dark bp-grid">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-label">Sample Output</div>
+            <h2>What the Bid Looks Like</h2>
+            <p>A realistic line-item snapshot of a Division 26 package generated by BidEngine. Real units, real rates, ready to send.</p>
+        </div>
+        <div class="sample-wrap">
+            <div class="sample-head">
+                <div>
+                    <div class="label">Professional Bid Proposal</div>
+                    <div class="proj">Sample &mdash; Division 26 Electrical Package</div>
+                </div>
+                <div class="meta">Generated 4:32 &middot; Vendor pricing verified</div>
+            </div>
+            <div class="sample-grid">
+                <div>Div</div>
+                <div>Description</div>
+                <div style="text-align:right">Qty</div>
+                <div style="text-align:right">Rate</div>
+                <div style="text-align:right">Extended</div>
+            </div>
+            <div>
+            <div class="sample-row">
+                <div class="div-num">26</div>
+                <div class="desc">LED 2x4 Troffer<small>Lithonia BLT, 0-10V dim, 4000K</small></div>
+                <div class="right">84 EA</div>
+                <div class="right">$385</div>
+                <div class="ext">$32,340</div>
+            </div>
+            <div class="sample-row">
+                <div class="div-num">26</div>
+                <div class="desc">277V 1P 20A Breaker Panel<small>Square D NQOD, 42-circuit</small></div>
+                <div class="right">4 EA</div>
+                <div class="right">$1,850</div>
+                <div class="ext">$7,400</div>
+            </div>
+            <div class="sample-row">
+                <div class="div-num">26</div>
+                <div class="desc">3/4&quot; EMT Conduit<small>Set screw, hung w/ Caddy clips</small></div>
+                <div class="right">4,200 LF</div>
+                <div class="right">$3.40</div>
+                <div class="ext">$14,280</div>
+            </div>
+            <div class="sample-row">
+                <div class="div-num">26</div>
+                <div class="desc">#12 THHN Cu<small>Stranded, by color</small></div>
+                <div class="right">12,800 LF</div>
+                <div class="right">$0.42</div>
+                <div class="ext">$5,376</div>
+            </div>
+            <div class="sample-row">
+                <div class="div-num">26</div>
+                <div class="desc">400A Service &amp; Gear<small>Square D switchgear w/ 65kAIC, ATS</small></div>
+                <div class="right">1 LS</div>
+                <div class="right">$48,000</div>
+                <div class="ext">$48,000</div>
+            </div>
+            </div>
+            <div class="sample-total">
+                <div></div><div></div><div></div>
+                <div class="label">Grand Total</div>
+                <div class="amt">$107,396</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why -->
+<section class="section section-dark bp-grid">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-label">Why for Electrical</div>
+            <h2>The Bid Mistakes BidEngine Doesn&rsquo;t Make</h2>
+        </div>
+        <div class="why-block">
+            <p>Electrical bids get sloppy when the panel schedule and the one-line disagree, when the lighting fixture types in the field don't match the schedule, or when nobody priced the feeder upsize the engineer hid in a note. BidEngine reads the panel schedule and one-line together, flags mismatches, and pulls fixture types from the schedule so the trim list matches what shows up in your warehouse.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Other Divisions -->
+<section class="section section-dark bp-grid">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-label">Also Bid With BidEngine</div>
+            <h2>Every CSI Division. One Platform.</h2>
+            <p>If you self-perform multiple trades, every division below uses the same upload, the same dashboard, and the same proposal format.</p>
+        </div>
+        <div class="other-grid">
+            <a href="/divisions/concrete.html" class="other-card">
+                <div class="div-num">DIV 03</div>
+                <h3>Concrete</h3>
+                <span class="arrow">View &rsaquo;</span>
+            </a>
+            <a href="/divisions/finishes.html" class="other-card">
+                <div class="div-num">DIV 09</div>
+                <h3>Finishes</h3>
+                <span class="arrow">View &rsaquo;</span>
+            </a>
+            <a href="/divisions/fire-suppression.html" class="other-card">
+                <div class="div-num">DIV 21</div>
+                <h3>Fire Suppression</h3>
+                <span class="arrow">View &rsaquo;</span>
+            </a>
+            <a href="/divisions/plumbing.html" class="other-card">
+                <div class="div-num">DIV 22</div>
+                <h3>Plumbing</h3>
+                <span class="arrow">View &rsaquo;</span>
+            </a>
+            <a href="/divisions/hvac.html" class="other-card">
+                <div class="div-num">DIV 23</div>
+                <h3>HVAC</h3>
+                <span class="arrow">View &rsaquo;</span>
+            </a>
+            <a href="/divisions/communications.html" class="other-card">
+                <div class="div-num">DIV 27</div>
+                <h3>Communications</h3>
+                <span class="arrow">View &rsaquo;</span>
+            </a>
+            <a href="/divisions/safety-security.html" class="other-card">
+                <div class="div-num">DIV 28</div>
+                <h3>Safety &amp; Security</h3>
+                <span class="arrow">View &rsaquo;</span>
+            </a>
+            <a href="/divisions/civil-site-work.html" class="other-card">
+                <div class="div-num">DIV 31&ndash;33</div>
+                <h3>Civil &amp; Site Work</h3>
+                <span class="arrow">View &rsaquo;</span>
+            </a>
+            <a href="/divisions/industrial-systems.html" class="other-card">
+                <div class="div-num">DIV 40+</div>
+                <h3>Industrial Systems</h3>
+                <span class="arrow">View &rsaquo;</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final-cta section-dark bp-grid">
+    <div class="container">
+        <h2>Bid Your Next <span class="hl">Electrical Project</span> in Minutes</h2>
+        <p>Upload your plan set. BidEngine writes the bid. Send it to the GC the same day.</p>
+        <a href="https://cal.com/darius-stroman-byeng8/30min" class="btn-primary" target="_blank" style="font-size:1.05rem;padding:0.95rem 2.6rem;">Book a Free Demo</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:800;color:#fff;">BID<span style="color:var(--orange);">ENGINE</span></div>
+                <p>AI-powered bid estimating across every CSI division. A product by <a href="https://www.stromation.com" style="color:var(--orange);display:inline;">Stromation</a>.</p>
+            </div>
+            <div>
+                <h4>Product</h4>
+                <a href="/#how-it-works">How It Works</a>
+                <a href="/#features">Features</a>
+                <a href="/#divisions">Divisions</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+            </div>
+            <div>
+                <h4>Company</h4>
+                <a href="https://www.stromation.com">Stromation</a>
+                <a href="https://www.stromation.com/about.html">About</a>
+                <a href="https://www.stromation.com/blog.html">Blog</a>
+                <a href="https://www.stromation.com/case-studies.html">Case Studies</a>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <a href="mailto:contact@stromation.com">contact@stromation.com</a>
+                <a href="tel:+18559320493">(855) 932-0493</a>
+                <a href="https://cal.com/darius-stroman-byeng8/30min" target="_blank">Book a Demo</a>
+                <div style="margin-top:1rem;">
+                    <a href="https://www.stromation.com/privacy.html">Privacy</a>
+                    <a href="https://www.stromation.com/terms.html">Terms</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 Stromation. All rights reserved.</div>
+    </div>
+</footer>
+
+</body>
+</html>
